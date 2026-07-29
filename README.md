@@ -30,7 +30,11 @@ SoC: `EcoNet EN7526GT` (Note: *evolution of EN751221 family, same toolchain*)
 Landline: `Microchip LE9652PQC`
 # UART log
 You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-log)
-
+# Dive In U-boot - Instruction
+ - Find device's SPI NAND
+ - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND when `BMT & BBT Init Success` shows up
+ - Press a key if terminal shows `Press any key in 3 secs to enter boot command mode.`
+ - If the terminal shows `bldr> `, you're in. Restart the process in case something else appears.
 # Device's U-boot Available Commands
     ?                                   Print out help messages.
     help                                Print out help messages.
@@ -62,3 +66,7 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
     httpd                               Start Web Server
     ddrdrv <..>                         Change DDR driving length
     mtd                                 Print NAND partition start/end addresses
+>[!NOTE]
+>`nandrd` buffer is 0x1000 = 4096 bytes, going above will crash U-boot
+>
+>`xmdm` *only* receive file, not send.
