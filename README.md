@@ -25,7 +25,7 @@ Memory: `Winbond W632GG6MB-12 256MB 128M*16-bit DDR3 2Gbit`
 
 WiFi: `Mediatek MT7592N`
 
-SoC: `EcoNet EN7526GT`
+SoC: `EcoNet EN7526GT` (Note: *evolution of EN751221 family, same toolchain*)
 
 Landline: `Microchip LE9652PQC`
 # UART log
