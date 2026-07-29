@@ -61,5 +61,4 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
     ipaddr <ip addr>                    Change modem's IP.
     httpd                               Start Web Server
     ddrdrv <..>                         Change DDR driving length
-    mtd
-
+    mtd                                 Print NAND partition start/end addresses
