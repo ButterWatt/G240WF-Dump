@@ -1,0 +1,115 @@
+root@aml-s805-mxq:~/g240wf-mtd# strings G240WF-Dump-Untested.bin | grep Linux
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+ONTUSER:x:1000:10:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:1000:10:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+ONTUSER:x:1000:10:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:1000:10:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:1000:10:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:1000:10:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+ONTUSER:x:0:0:Linux User,,,:/etc/home/ONTUSER:/bin/sh
+Linux 2.6
+Linux 2.6
+Linux 2.6 IPsec interface codex
+Linux 2.6
+Linux 2.6
+root@aml-s805-mxq:~/g240wf-mtd# strings G240WF-Dump-Untested.bin | grep Busy
+Busy
+Busy
+Busy
+Busy
+ID>BusyT+
+>Busyv
+>Busy=Q
+<Signal>BusyTone</
+Busy
+Busy
+ID>BusyT+
+>Busyv
+>Busyx
+Busy "?
+Busy
+Busy
+Busy
+Busy
+: BusyBox v1.16.0(
+started: BusyBox v1.16./H
+started: BusyBox v1.16./H
+ed: BusyBox v1.16.0(
+started: BusyBox v1.16./<
+started: BusyBox v1.16./<
+started: BusyBox v1.16./<
+root@aml-s805-mxq:~/g240wf-mtd#
+root@aml-s805-mxq:~/g240wf-mtd# strings G240WF-Dump-Untested.bin | grep admin
+telecomadmin
+vtadmin
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+(vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:99999:7:::
+wheel:x:10:root,ONTUSER,vtadmin
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+(vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:99999:7:::
+wheel:x:10:root,ONTUSER,vtadmin
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+(vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:99999:7:::
+wheel:x:10:root,ONTUSER,vtadmin
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+(vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:99999:7:::
+wheel:x:10:root,ONTUSER,vtadmin
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+vtadmin:$1$f6zuvNSy$fXUXAFHvNTg.ltuy5kjbt.:0:0:9a6:
+wheel:x:10:root,ONTUSER,vtadmin
+vtadmind
+vtadmin:x:0:0:Linux User,,,:/configs/home/vtadmin:/bin/sh
+an administrative burden.*
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+ Web: user account [admin] clientip [] logged in
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+wa]Web: user account [admin] clientip []x
+           adminusradmin      adminadmin ALC#FGU000000000000000000000000000000000000000000000000VIET
+           adminusradmin      adminadmin ALC#FGU000000000000000000000000000000000000000000000000VIET
