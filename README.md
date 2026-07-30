@@ -1,5 +1,8 @@
 # Overview
 MTD Dump of Nokia G-240W-F GPON ONT
+
+>[!NOTE]
+>You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump.py)
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
 # Partition Table
@@ -28,6 +31,8 @@ WiFi: `Mediatek MT7592N`
 SoC: `EcoNet EN7526GT` (Note: *evolution of EN751221 family, same toolchain*)
 
 Landline: `Microchip LE9652PQC`
+
+(*Nevermind why NAND Table so weird, that's classic Symbian mind applied to GPON ONT systems*)
 # UART log
 You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-log)
 # Dive In U-boot - Instruction
@@ -66,7 +71,7 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
     httpd                               Start Web Server
     ddrdrv <..>                         Change DDR driving length
     mtd                                 Print NAND partition start/end addresses
->[!NOTE]
+>[!IMPORTANT]
 >`nandrd` buffer is 0x1000 = 4096 bytes, going above will crash U-boot
 >
 >`xmdm` *only* receive file, not send.
