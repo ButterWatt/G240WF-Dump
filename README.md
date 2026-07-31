@@ -34,12 +34,17 @@ Landline: `Microchip LE9652PQC`
 
 (*Nevermind why NAND Table so weird, that's classic Symbian mind applied to GPON ONT systems*)
 # UART log
-You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-log)
+You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-log) and UART shell log [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-shell-log)
 # Dive In U-boot - Instruction
  - Find device's SPI NAND
  - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND when `BMT & BBT Init Success` shows up
  - Press a key if terminal shows `Press any key in 3 secs to enter boot command mode.`
  - If the terminal shows `bldr> `, you're in. Restart the process in case something else appears.
+# Enable shell - Instructiom
+ - Find device's SPI NAND
+ - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND for a brief moment when `BMT & BBT Init Success` shows up
+ - Wait for boot command promt to timeout (*Please, do not press any keys at this point*)
+ - The terminal will show something like `Linux version 3.18.21 (buildmgr@AONT15) (gcc version 4.9.3 (Buildroot 2015.08.1) ) #4 SMP Fri Aug 11 17:25:43 CST 2017`, you're in . Retry in case it did not show up. 
 # Device's U-boot Available Commands
     ?                                   Print out help messages.
     help                                Print out help messages.
