@@ -1,0 +1,2311 @@
+BGA IC
+Xtal:1
+DDR3 init.
+DRAMC init done.
+Calculate size.
+DRAM size=256MB
+Set new TRFC.
+ddr-1066
+
+7512DRAMC V1.2.2 (0)
+Set SPI Flash Clock to 25 Mhz
+
+
+EN751221 at Fri Aug 11 17:19:21 CST 2017 version 1.1 free bootbase
+
+Memory size 256MB
+
+Set SPI Flash Clock to 25 Mhz
+spi_nand_probe: mfr_id=0xc2, dev_id=0x12
+Dected SPI NAND Flash : _SPI_NAND_DEVICE_ID_MXIC35LF1G, Flash Size=0x8000000
+bmt pool size: 81
+BMT & BBT Init Success
+tclinux partition size = 0x1000000, real size = 0x1136e00
+tclinux partition size < its real size
+tclinux_slave partition size = 0x1000000, real size = 0xcf6bef58
+tclinux_slave partition size < its real size
+
+wrong board type !
+Unknown boardType!
+Press any key in 3 secs to enter boot command mode.
+....................
+
+commit = 0
+next_active = 0
+image0_is_valid = -1
+image1_is_valid = -1
+boot_fail_num = 0
+read OpreatorID succeed =
+leave bootloader-image0_is_valid = -1
+leave bootloader-image1_is_valid = -1
+
+
+#######select0  0x80000
+#######kernel_size 2262516
+#######kernel_size 2293760
+Decompress to 80002000 free_mem_ptr=80750000 free_mem_ptr_end=807B0000
+from main
+*********run kernel 0********
+trx_header_len = 256
+kernel_size = 2293760
+Uncompressing [LZMA] ...  done.
+Initializing cgroup subsys cpuset
+Initializing cgroup subsys cpu
+Initializing cgroup subsys cpuacct
+Linux version 3.18.21 (buildmgr@AONT15) (gcc version 4.9.3 (Buildroot 2015.08.1) ) #4 SMP Fri Aug 11 17:25:43 CST 2017
+ISPRAM0: PA=00500000,Size=00010000,enabled
+memsize:256MB
+EcoNet EN751221 SOC prom init
+bootconsole [early0] enabled
+CPU0 revision is: 00019558 (MIPS 34Kc)
+Determined physical RAM map:
+ memory: 0fffe000 @ 00002000 (usable)
+Wasting 64 bytes for tracking 2 unused pages
+Zone ranges:
+  Normal   [mem 0x00002000-0x0fffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x00002000-0x0fffffff]
+Initmem setup node 0 [mem 0x00002000-0x0fffffff]
+Detected 1 available secondary CPU(s)
+Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+PERCPU: Embedded 9 pages/cpu @81203000 s5632 r8192 d23040 u36864
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65022
+Kernel command line:  es=1
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Writing ErrCtl register=0007421c
+Readback ErrCtl register=0007421c
+nmi base is 8124c200
+Memory: 252984K/262136K available (5144K kernel code, 201K rwdata, 936K rodata, 228K init, 273K bss, 9152K reserved)
+SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Hierarchical RCU implementation.
+NR_IRQS:64
+
+tc3162_time_init: Init bus timeout and watchdog
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 10
+plat_set_irq_affinity: irq num 10
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 33
+plat_set_irq_affinity: irq num 33
+CPU frequency 900.00 MHz
+plat_time_init: Entered, mips_timer_ack ptr is [80006e60]
+ Using 200.000 MHz high precision timer.
+r4k_clockevent_init: setup_irq OK, irq is [31]
+console [ttyS0] enabled
+console [ttyS0] enabled
+bootconsole [early0] disabled
+bootconsole [early0] disabled
+Calibrating delay loop... 597.60 BogoMIPS (lpj=2988032)
+pid_max: default: 32768 minimum: 301
+Security Framework initialized
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Initializing cgroup subsys devices
+Initializing cgroup subsys freezer
+Initializing cgroup subsys debug
+34K sync es set to 1.
+Config7: 0x80080500
+ISPRAM0: PA=00500000,Size=00010000,enabled
+Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+CPU1 revision is: 00019558 (MIPS 34Kc)
+Synchronize counters for CPU 1: done.
+Brought up 2 CPUs
+NET: Registered protocol family 16
+MT7512_pcie_init
+check pcie link up status:
+isRC0_LINKUP=0
+isRC1_LINKUP=1
+registering PCI controller with io_map_base unset
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI host bridge to bus 0000:00
+pci_bus 0000:00: root bus resource [mem 0x20000000-0x2fffffff]
+pci_bus 0000:00: root bus resource [io  0x1f600000-0x1f61ffff]
+pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+pci 0000:00:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+pci 0000:00:01.0: BAR 8: assigned [mem 0x20000000-0x200fffff]
+pci 0000:00:00.0: PCI bridge to [bus 01]
+pci 0000:02:00.0: BAR 0: assigned [mem 0x20000000-0x200fffff]
+pci 0000:00:01.0: PCI bridge to [bus 02]
+pci 0000:00:01.0:   bridge window [mem 0x20000000-0x200fffff]
+NET: Registered protocol family 8
+NET: Registered protocol family 20
+Switched to clocksource MIPS
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP: reno registered
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+
+ mt7512_pcie_fixup: 0x3438 = 20000014
+ mt7512_pcie_rc1_retrain: 70 = 0046c811 80 = 01608c12
+TC3162 hardware watchdog module loaded.
+futex hash table entries: 512 (order: 2, 16384 bytes)
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+ntfs: driver 2.1.31 [Flags: R/W DEBUG].
+jffs2: version 2.2. (NAND) � 2001-2006 Red Hat, Inc.
+msgmni has been set to 494
+NET: Registered protocol family 38
+io scheduler noop registered (default)
+ttyS0 at I/O 0xbfbf0003 (irq = 1, base_baud = 7200) is a TC3162
+ECNT ring buffer init success
+brd: module loaded
+
+SPI Flash Init Start
+Found no SPI flash device
+IS_SPIFLASH=0x0, IS_NANDFLASH=0x2, (0xBFA10114)=0x6)
+SPI_NAND_Flash_init: before init, mtx_mode_tog=0xl9, manaul_en=0x1
+spi_nand_probe: mfr_id=0xc2, dev_id=0x12
+Dected SPI NAND Flash : _SPI_NAND_DEVICE_ID_MXIC35LF1G, Flash Size=0x8000000
+spi nand flash
+tc3162: flash device 0x01000000 at 0x1c000000
+EN7512 mtd init: spi nand probe enter
+[spi_nand_setup] : Enter
+nand: device found, Manufacturer ID: 0xc2, Chip ID: 0x12
+nand: Macronix _SPI_NAND_DEVICE_ID_MXIC35LF1G
+nand: 128MiB, SLC, page size: 2048, OOB size: 64
+nand_scan_ident ok
+[spi_nand_setup]: chip size =  0x8000000, erase_shift=0x11
+calc_bmt_pool_size : need_valid_block_num=0x51, total_block=0x400
+en7512_nand_check_block_bad: read_addr=0x7fe0000, page_number=0xffc0
+en7512_nand_check_block_bad: read_addr=0x7fc0000, page_number=0xff80
+en7512_nand_check_block_bad: read_addr=0x7fa0000, page_number=0xff40
+en7512_nand_check_block_bad: read_addr=0x7f80000, page_number=0xff00
+en7512_nand_check_block_bad: read_addr=0x7f60000, page_number=0xfec0
+en7512_nand_check_block_bad: read_addr=0x7f40000, page_number=0xfe80
+en7512_nand_check_block_bad: read_addr=0x7f20000, page_number=0xfe40
+en7512_nand_check_block_bad: read_addr=0x7f00000, page_number=0xfe00
+en7512_nand_check_block_bad: read_addr=0x7ee0000, page_number=0xfdc0
+en7512_nand_check_block_bad: read_addr=0x7ec0000, page_number=0xfd80
+en7512_nand_check_block_bad: read_addr=0x7ea0000, page_number=0xfd40
+en7512_nand_check_block_bad: read_addr=0x7e80000, page_number=0xfd00
+en7512_nand_check_block_bad: read_addr=0x7e60000, page_number=0xfcc0
+en7512_nand_check_block_bad: read_addr=0x7e40000, page_number=0xfc80
+en7512_nand_check_block_bad: read_addr=0x7e20000, page_number=0xfc40
+en7512_nand_check_block_bad: read_addr=0x7e00000, page_number=0xfc00
+en7512_nand_check_block_bad: read_addr=0x7de0000, page_number=0xfbc0
+en7512_nand_check_block_bad: read_addr=0x7dc0000, page_number=0xfb80
+en7512_nand_check_block_bad: read_addr=0x7da0000, page_number=0xfb40
+en7512_nand_check_block_bad: read_addr=0x7d80000, page_number=0xfb00
+en7512_nand_check_block_bad: read_addr=0x7d60000, page_number=0xfac0
+en7512_nand_check_block_bad: read_addr=0x7d40000, page_number=0xfa80
+en7512_nand_check_block_bad: read_addr=0x7d20000, page_number=0xfa40
+en7512_nand_check_block_bad: read_addr=0x7d00000, page_number=0xfa00
+en7512_nand_check_block_bad: read_addr=0x7ce0000, page_number=0xf9c0
+en7512_nand_check_block_bad: read_addr=0x7cc0000, page_number=0xf980
+en7512_nand_check_block_bad: read_addr=0x7ca0000, page_number=0xf940
+en7512_nand_check_block_bad: read_addr=0x7c80000, page_number=0xf900
+en7512_nand_check_block_bad: read_addr=0x7c60000, page_number=0xf8c0
+en7512_nand_check_block_bad: read_addr=0x7c40000, page_number=0xf880
+en7512_nand_check_block_bad: read_addr=0x7c20000, page_number=0xf840
+en7512_nand_check_block_bad: read_addr=0x7c00000, page_number=0xf800
+en7512_nand_check_block_bad: read_addr=0x7be0000, page_number=0xf7c0
+en7512_nand_check_block_bad: read_addr=0x7bc0000, page_number=0xf780
+en7512_nand_check_block_bad: read_addr=0x7ba0000, page_number=0xf740
+en7512_nand_check_block_bad: read_addr=0x7b80000, page_number=0xf700
+en7512_nand_check_block_bad: read_addr=0x7b60000, page_number=0xf6c0
+en7512_nand_check_block_bad: read_addr=0x7b40000, page_number=0xf680
+en7512_nand_check_block_bad: read_addr=0x7b20000, page_number=0xf640
+en7512_nand_check_block_bad: read_addr=0x7b00000, page_number=0xf600
+en7512_nand_check_block_bad: read_addr=0x7ae0000, page_number=0xf5c0
+en7512_nand_check_block_bad: read_addr=0x7ac0000, page_number=0xf580
+en7512_nand_check_block_bad: read_addr=0x7aa0000, page_number=0xf540
+en7512_nand_check_block_bad: read_addr=0x7a80000, page_number=0xf500
+en7512_nand_check_block_bad: read_addr=0x7a60000, page_number=0xf4c0
+en7512_nand_check_block_bad: read_addr=0x7a40000, page_number=0xf480
+en7512_nand_check_block_bad: read_addr=0x7a20000, page_number=0xf440
+en7512_nand_check_block_bad: read_addr=0x7a00000, page_number=0xf400
+en7512_nand_check_block_bad: read_addr=0x79e0000, page_number=0xf3c0
+en7512_nand_check_block_bad: read_addr=0x79c0000, page_number=0xf380
+en7512_nand_check_block_bad: read_addr=0x79a0000, page_number=0xf340
+en7512_nand_check_block_bad: read_addr=0x7980000, page_number=0xf300
+en7512_nand_check_block_bad: read_addr=0x7960000, page_number=0xf2c0
+en7512_nand_check_block_bad: read_addr=0x7940000, page_number=0xf280
+en7512_nand_check_block_bad: read_addr=0x7920000, page_number=0xf240
+en7512_nand_check_block_bad: read_addr=0x7900000, page_number=0xf200
+en7512_nand_check_block_bad: read_addr=0x78e0000, page_number=0xf1c0
+en7512_nand_check_block_bad: read_addr=0x78c0000, page_number=0xf180
+en7512_nand_check_block_bad: read_addr=0x78a0000, page_number=0xf140
+en7512_nand_check_block_bad: read_addr=0x7880000, page_number=0xf100
+en7512_nand_check_block_bad: read_addr=0x7860000, page_number=0xf0c0
+en7512_nand_check_block_bad: read_addr=0x7840000, page_number=0xf080
+en7512_nand_check_block_bad: read_addr=0x7820000, page_number=0xf040
+en7512_nand_check_block_bad: read_addr=0x7800000, page_number=0xf000
+en7512_nand_check_block_bad: read_addr=0x77e0000, page_number=0xefc0
+en7512_nand_check_block_bad: read_addr=0x77c0000, page_number=0xef80
+en7512_nand_check_block_bad: read_addr=0x77a0000, page_number=0xef40
+en7512_nand_check_block_bad: read_addr=0x7780000, page_number=0xef00
+en7512_nand_check_block_bad: read_addr=0x7760000, page_number=0xeec0
+en7512_nand_check_block_bad: read_addr=0x7740000, page_number=0xee80
+en7512_nand_check_block_bad: read_addr=0x7720000, page_number=0xee40
+en7512_nand_check_block_bad: read_addr=0x7700000, page_number=0xee00
+en7512_nand_check_block_bad: read_addr=0x76e0000, page_number=0xedc0
+en7512_nand_check_block_bad: read_addr=0x76c0000, page_number=0xed80
+en7512_nand_check_block_bad: read_addr=0x76a0000, page_number=0xed40
+en7512_nand_check_block_bad: read_addr=0x7680000, page_number=0xed00
+en7512_nand_check_block_bad: read_addr=0x7660000, page_number=0xecc0
+en7512_nand_check_block_bad: read_addr=0x7640000, page_number=0xec80
+en7512_nand_check_block_bad: read_addr=0x7620000, page_number=0xec40
+en7512_nand_check_block_bad: read_addr=0x7600000, page_number=0xec00
+en7512_nand_check_block_bad: read_addr=0x75e0000, page_number=0xebc0
+bmt pool size: 81
+en7512_nand_check_block_bad: read_addr=0x7fe0000, page_number=0xffc0
+en7512_nand_check_block_bad: read_addr=0x7fe0000, page_number=0xffc0
+en7512_nand_check_block_bad: read_addr=0x75e0000, page_number=0xebc0
+en7512_nand_check_block_bad: read_addr=0x75e0000, page_number=0xebc0
+BMT & BBT Init Success
+Creating 16 MTD partitions on "EN7512-SPI_NAND":
+0x000000000000-0x000000040000 : "bootloader"
+0x000000040000-0x000000080000 : "romfile"
+0x000000080000-0x000000380000 : "kernel"
+0x000000380000-0x000002280000 : "rootfs"
+0x000002280000-0x000002580000 : "kernel_slave"
+0x000002580000-0x000004480000 : "rootfs_slave"
+0x000004480000-0x000004780000 : "kernel_oflt"
+0x000004780000-0x000005380000 : "rootfs_oflt"
+0x000005380000-0x000005b80000 : "config"
+0x000005b80000-0x000006780000 : "log"
+0x000006780000-0x000006d80000 : "extfs"
+0x000006d80000-0x000006dc0000 : "bosa"
+0x000006dc0000-0x000006e00000 : "flag"
+0x000006e00000-0x000006e40000 : "flagback"
+0x000006e40000-0x000006e80000 : "ri"
+0x000006e80000-0x000006ec0000 : "riback"
+commit = 0
+next_active = 0
+image0_is_valid = -1
+image1_is_valid = -1
+boot_fail_num = 1
+active = 0
+start rootfs
+select img A 3
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+NET: Registered protocol family 24
+BGA USB PHY config
+xhci-hcd xhci-hcd: xHCI Host Controller
+xhci-hcd xhci-hcd: new USB bus registered, assigned bus number 1
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 1, irq = 18
+plat_set_irq_affinity: irq num 18
+xhci-hcd xhci-hcd: irq 18, io mem 0x1fb90000
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+xhci-hcd xhci-hcd: xHCI Host Controller
+xhci-hcd xhci-hcd: new USB bus registered, assigned bus number 2
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+usbcore: registered new interface driver cdc_acm
+cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usbserial
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver cypress_m8
+usbserial: USB Serial support registered for DeLorme Earthmate USB
+usbserial: USB Serial support registered for HID->COM RS232 Adapter
+usbserial: USB Serial support registered for Nokia CA-42 V2 Adapter
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+hidraw: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (3952 buckets, 15808 max)
+nf_tables: (c) 2007-2009 Patrick McHardy <kaber@trash.net>
+nf_tables_compat: (c) 2012 Pablo Neira Ayuso <pablo@netfilter.org>
+TCP: cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+sit: IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+l2tp_core: L2TP core driver, V2.0
+l2tp_ppp: PPPoL2TP kernel driver, V2.0
+l2tp_netlink: L2TP netlink interface
+8021q: 802.1Q VLAN Support v1.8
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 1, irq = 1
+plat_set_irq_affinity: irq num 1
+tc3162ser_startup
+VFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+Freeing unused kernel memory: 228K (80627000 - 80660000)
+
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000003
+
+
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000001
+
+mount: mounting debugfs on /sys/kernel/debug failed: No such file or directory
+UBI: attaching mtd8 to ubi0
+UBI: scanning is finished
+UBI: attached mtd8 (name "config", size 8 MiB) to ubi0
+UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+UBI: good PEBs: 64, bad PEBs: 0, corrupted PEBs: 0
+UBI: user volume: 1, internal volumes: 1, max. volumes count: 128
+UBI: max/mean erase counter: 9315/7877, WL threshold: 4096, image sequence number: 0
+UBI: available PEBs: 0, total reserved PEBs: 64, PEBs reserved for bad PEB handling: 0
+UBI: background thread "ubi_bgt0d" started, PID 536
+UBI device number 0, total 64 LEBs (8126464 bytes,UBI: attaching mtd9 to ubi1
+ 7.8 MiB), available 0 LEBs (0 bytes), LEB size 126976 bytes (124.0 KiB)
+UBI: scanning is finished
+UBI: attached mtd9 (name "log", size 12 MiB) to ubi1
+UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+UBI: good PEBs: 96, bad PEBs: 0, corrupted PEBs: 0
+UBI: user volume: 1, internal volumes: 1, max. volumes count: 128
+UBI: max/mean erase counter: 3728/2158, WL threshold: 4096, image sequence number: 0
+UBI: available PEBs: 0, total reserved PEBs: 96, PEBs reserved for bad PEB handling: 0
+UBI: background thread "ubi_bgt1d" started, PID 538
+UBI device number 1, total 96 LEBs (12189696 bytes, 11.6 MiB), available 0 LEBs (0 bytes), LEB size 126976 bytes (124.0 KiB)
+UBIFS: background thread "ubifs_bgt0_0" started, PID 541
+UBIFS: recovery needed
+UBIFS: recovery completed
+UBIFS: mounted UBI device 0, volume 0, name "configfs"
+UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS: FS size: 6348800 bytes (6 MiB, 50 LEBs), journal size 1396736 bytes (1 MiB, 11 LEBs)
+UBIFS: reserved for root: 0 bytes (0 KiB)
+UBIFS: media format: w4/r0 (latest is w4/r0), UUID E772350D-DE93-4B77-9A81-430D490B50EF, small LPT model
+UBIFS: background thread "ubifs_bgt1_0" started, PID 543
+UBIFS: recovery needed
+UBIFS: recovery completed
+UBIFS: mounted UBI device 1, volume 0, name "logfs"
+UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+UBIFS: FS size: 10412032 bytes (9 MiB, 82 LEBs), journal size 1904640 bytes (1 MiB, 15 LEBs)
+UBIFS: reserved for root: 0 bytes (0 KiB)
+UBIFS: media format: w4/r0 (latest is w4/r0), UUID B789FC7D-0731-4DD7-9478-6E943850623D, small LPT model
+committed:0
+actived:0
+grep: /etc/passwd: No such file or directory
+buildinfo : 3FE46606BFGB87
+we are now image0 !
+update image_version from bootup system
+no need to update image0 version
+Loading RI driver...
+install nand_drv driver!
+g_board_hw_version 80
+ri module install
+G120WF specail test
+Loading SDK modules...
+===========tune parmeter===========
+/usr/exe/sdk_moudles.sh: line 13: can't create /proc/sys/net/netfilter/nf_conntrack_icmp_timeout: nonexistent directory
+sdk_moudles.sh (817): drop_caches: 3
+module_sel: module license 'unspecified' taints kernel.
+Disabling lock debugging due to kernel taint
+TC3162 LED Manager 0.1 init
+
+tcledctrl version: tcledctrl V1.1.0.0 (Aug 11 2017-17:26:45).
+led path:/userfs/led.conf
+tccicmd V1.1.0.0 (Aug 11 2017-17:26:48)
+
+SIFMaster 0.1 init
+
+Register sifm cmd
+insmod eth driver
+macType = 0
+qdma_lan: physical_size is 0x00200000
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 1, irq = 22
+plat_set_irq_affinity: irq num 22
+ether.c:v1.00-NAPI 29.Mar.2015
+netif_napi_add() called with weight 128 on device eth
+eth: FE MAC Ethernet address: 00:AA:BB:01:23:45
+Use External switch ,type 10
+EN7512 TRGMII V1.0
+tcPhyVerLookUp 3777 9412
+ 7530 Ge, 0x1
+MCM MT7530
+ [tcPhyInit] in  [tcPhyInit] out , r31 = (0, 0x0)
+tcPhyVerLookUp 3777 9412
+ 7530 Ge, 0x1
+MCM MT7530
+ [tcPhyInit] in  [tcPhyInit] out , r31 = (1, 0x0)
+tcPhyVerLookUp 3777 9412
+ 7530 Ge, 0x1
+MCM MT7530
+ [tcPhyInit] in  [tcPhyInit] out , r31 = (2, 0x0)
+tcPhyVerLookUp 3777 9412
+ 7530 Ge, 0x1
+MCM MT7530
+ [tcPhyInit] in  [tcPhyInit] out , r31 = (3, 0x0)
+tcPhyVerLookUp 3777 9412
+ 7530 Ge, 0x1
+MCM MT7530
+ [tcPhyInit] in  [tcPhyInit] out , r31 = (4, 0x0)
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 9451
+ 7512 Ge,
+MCM MT7530
+ [tcPhyInit] in  [tcPhyInit] out , r31 = (12, 0x0)
+  GE Rext AnaCal Done! (1)(0x1f)
+  GE Rext AnaCal Done! (1)(0x1f)
+  GE R50 AnaCal Done! (1) (0x2b)(0xab)
+  GE R50 AnaCal Done! (2) (0x2c)(0xac)
+  GE R50 AnaCal Done! (1) (0x2b)(0xab)
+  GE R50 AnaCal Done! (2) (0x2c)(0xac)
+ GE Tx offset AnaCal Done! (1)(0x21)
+ GE Tx offset AnaCal Done! (1)(0x1)
+ GE Tx offset AnaCal Done! (1)(0x21)
+ GE Tx offset AnaCal Done! (5)(0x5)
+ GE Tx amp AnaCal Done! (pair-0)(0x12)(0x1c20)
+ GE Tx amp AnaCal Done! (27) (0x5)
+ GE Tx amp AnaCal Done! (pair-1)(0x17)(0x520)
+ GE Tx amp AnaCal Done! (29) (0x3)
+ GE Tx amp AnaCal Done! (pair-2)(0x19)(0x620)
+ GE Tx amp AnaCal Done! (28) (0x4)
+ GE Tx amp AnaCal Done! (pair-3)(0x21)(0x720)
+ GE Tx amp AnaCal Done! (27) (0x5)
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+tcPhyVerLookUp 3777 0
+MCM MT7530
+eth: starting interface.
+netif_start_queue
+qdmamgr_lan set ratelimit
+Exec. Successful
+Exec. Successful and the accuracy is 8kbps
+Exec. Successful and the accuracy is 8kbps
+insmod pon driver
+_SIF_DrvRawRead:
+Error sub-addr!
+Error! phy_I2C_read return value = 0
+u1DevAddr:0x70, u4WordAddr:0x170
+EN7570 not found!
+_SIF_DrvRawRead:
+Error sub-addr!
+Error! phy_I2C_read return value = 0
+u1DevAddr:0x50, u4WordAddr:0x14
+_SIF_DrvRawRead:
+Error sub-addr!
+Error! phy_I2C_read return value = 0
+u1DevAddr:0x50, u4WordAddr:0x28
+PON PHY driver version is 160329.103.107
+macType = 0
+qdma_wan: qdma_bmgr.c [2737]: HW_FWD physical size is not illegal, force setting to 4MB
+qdma_wan: physical_size is 0x00400000
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 1, irq = 23
+plat_set_irq_affinity: irq num 23
+xPON driver initialization
+Alloc data struct memory successful, 35344
+ri_get_wan_mac  ecb3:13ee:cb54
+qdmamgr_wan set ratelimit
+Exec. Successful
+Exec. Successful and the accuracy is 8kbps
+Exec. Successful and the accuracy is 8kbps
+fe set rxbc 1280 0
+ethphxcmd set ratelimit BC MC 64pps on switch
+*reg=0000211c value:68010101
+*reg=0000221c value:68010101
+*reg=0000231c value:68010101
+*reg=0000241c value:68010101
+*reg=0000261c value:4a0c0c0c (ext_switch:1)
+*reg=0000261c value:4a0c0c0c (ext_switch:0)
+ethphxcmd set ratelimit MLD IGMP PPPOE ARP RARP PAE BPDU DHCPV6 DHCPV4
+*reg=0000001c value:00106010
+*reg=00000020 value:00160016
+*reg=00000024 value:04100210
+*reg=000000a4 value:00100010
+*reg=00000020 value:00160016 (ext_switch:0)
+insmod hw_nat.ko
+HWNAT Module enabled with Type:L2B/IPv4/IPv6/DS-LITE/6RD, foeSize:80B, foeNum:16384
+IP check use Black List
+done
+====b
+
+write_irq_affinity new_value origin value is 00000008
+
+
+
+write_irq_affinity new_value changed value is 00000002
+
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 0 irq_vpe1 1, irq = 12
+plat_set_irq_affinity: irq num 12
+ind i
+
+write_irq_affinity new_value origin value is 00000004
+
+
+
+write_irq_affinity new_value changed value is 00000001
+
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 23
+plat_set_irq_affinity: irq num 23
+rq t
+
+write_irq_affinity new_value origin value is 00000007
+
+
+
+write_irq_affinity new_value changed value is 00000001
+
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 24
+plat_set_irq_affinity: irq num 24
+o cp
+
+write_irq_affinity new_value origin value is 00000007
+
+
+
+write_irq_affinity new_value changed value is 00000001
+
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 25
+plat_set_irq_affinity: irq num 25
+u=====
+sh: XXXA: unknown operand
+sh: ENXC: unknown operand
+sh: GZXC: unknown operand
+sys memwl bfb50284 0x00000003
+sys memwl bfb50294 0x00000000
+sys memwl bfb50298 0x00000000
+set mac = 00-00-00-00-00-00
+Loading Dying Gasp driver...
+Dying Gasp 0.31 init
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 1, irq = 19
+plat_set_irq_affinity: irq num 19
+Loading NetlinkMsg driver...
+init netlink in netlinkmsg.ko
+Loading WIFI driver...
+register mt_drv
+PCI: Enabling device 0000:00:01.0 (0000 -> 0002)
+PCI: Enabling device 0000:02:00.0 (0000 -> 0002)
+
+
+=== pAd = c0d81000, size = 696736 ===
+
+<-- RTMPAllocTxRxRingMemory, Status=0, ErrorValue=0x
+<-- RTMPAllocAdapterBlock, Status=0
+pAd->CSRBaseAddress =0xc0c80000, csr_addr=0xc0c80000!
+device_id =0x7603
+RtmpChipOpsHook(507): Not support for HIF_MT yet!
+mt7603_init()-->
+mt_bcn_buf_init(224): Not support for HIF_MT yet!
+<--mt7603_init()
+Loading GPIOMGR driver...
+board_type: 80
+gpio_mgr_init succ
+Loading GPIOLED driver...
+Loading BTN driver...
+btn_get_cfgtbl: G240WF
+button_task_init: btn_get_cfgtbl success
+btn_poll_task_init: kthread_run btn_poll_task success
+btn_event_task_init: success
+Loading BOSA driver...
+***creat bosa symbol link***
+mtphy[1]:Link-up at 1000 F.
+ALL 0x1E,0x9B =0x203
+ALL 0x1E,0x9C =0x303
+BB1 lch_mse_mdcA =0x2
+BB2 lch_mse_mdcB =0x3
+BB3 lch_mse_mdcC =0x3
+BB4 lch_mse_mdcD =0x3
+***load GN25L98 bosa***
+Can't find /configs/bosa/cfg.bob
+bosa init done.
+Loading USB driver...
+there is 2 usb port on board
+There is 2 USB port no board, insmod USB drivers
+SCSI subsystem initialized
+fuse init (API version 7.23)
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usblp
+Loading VLANCTL driver...
+Broadcom 802.1Q VLAN Interface, v0.1
+Loading PHYADPT driver...
+Loading IGMP driver...
+igmpdrv k_igmp_drv_init
+igmpmap IgmpMapFilterConfig IPTV Filter mode changed from 1 to 5
+successfully insert igmp dev module
+Loading FWDRV driver...
+[INFO fwdDrvInit 280]: loading fwddrv module...
+Loading VOIP driver...
+There
+
+write_irq_affinity new_value origin value is 00000008
+
+
+
+write_irq_affinity new_value changed value is 00000002
+
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 0 irq_vpe1 1, irq = 12
+plat_set_irq_affinity: irq num 12
+ is 2 POTS, voice supported
+status:
+DSPCore[Ver:TVB1.0.4.532.50-8]
+[1] PCM V2.4 (Tue May  9 15:34:36 CST 2017 Tue May  9 15:34:36 CST 2017)
+plat_set_irq_affinity: cpu 1
+plat_set_irq_affinity: cpu 1 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 0 irq_vpe1 1, irq = 12
+plat_set_irq_affinity: irq num 12
+pcm[Ver:TVB1.0.4.532.50-24]
+lec[Ver:TVB1.0.4.532.50-24]
+Major Num:233, device: spi
+spi[Ver:TVB1.0.4.532.50-8]
+[4294939229][slic][INFO][slic3_init:L36]init mod-slic3,interface:ZSI,devNum:1,gpio:2000
+[4294939230][slic][INFO][slic3_init:L49]ZSI
+slic3[Ver:TVB1.0.4.532.50-25]
+init slicFunc slic1:11 slic2:11 [4294939246][spi][INFO][SPI_Reset:L379]
+ SPI_Reset 2
+[4294939250][slic][INFO][SLIC_DeviceVerify:L570]SLIC_DeviceVerify
+[4294939250][slic][INFO][le9652_deviceVerify:L322]le9652_deviceVerify Start
+[4294939251][slic][INFO][le9652_deviceVerify:L325]devInfo->deviceNum=0 res_arr[0]=8 res_arr[0]=7d
+[4294939252][slic][INFO][le9652_deviceVerify:L332]le9652_deviceVerify Success!
+[4294939252][slic][INFO][SLIC_DeviceVerify:L582]DEVICE_VERIFY ret:1
+[4294939253][slic][ERR][le9652_deviceVerify:L318]le9652_deviceVerify already! Bypass 2nd verify!
+[4294939254][slic][INFO][SLIC_DeviceVerify:L582]DEVICE_VERIFY ret:0
+pcm1 ch num:2 pcm2 ch num:0
+fxs[Ver:TVB1.0.4.532.50-28]
+[fxs3_init](2005)noinit=0
+pcm1 ch num:2 pcm2 ch num:0
+Init fxsNum(0) + fxoNum(0) = slic_ch_num(2) , deviceNum(1)
+[4294939256][slic][INFO][SLIC_Init:L623]FXS_NUM=2 FXO_NUM=0
+[4294939256][slic][INFO][le9652_deviceInit:L445]le9652_deviceInit 0
+[4294939257][slic][INFO][le9652_slicParamReset:L199]le9652_slicParamReset Successful(CountryCode=Default)
+[4294939259][slic][INFO][le9652_deviceInit:L478]le9652 Init ..[4294939384][slic][INFO][le9652_deviceInit:L493]
+le9652_Init_Cnt = 105
+[4294939385][slic][INFO][le9652_deviceInit:L545]CODEC_LINEAR setting
+[4294939385][slic][INFO][le9652_deviceInit:L586]FXS-0 timeslot:2
+[4294939386][slic][INFO][le9652_deviceInit:L600]FXS-1 timeslot:3
+[4294939387][slic][INFO][le9652_deviceInit:L617]fxs0 gain--TX :4000 RX: 4000
+[4294939387][slic][INFO][le9652_deviceInit:L617]fxs1 gain--TX :4000 RX: 4000
+[4294939388][slic][INFO][SLIC_Init:L623]FXS_NUM=2 FXO_NUM=0
+[4294939388][slic][WARN][le9652_deviceInit:L438]Bypass le9652_deviceInit on Device 1!
+init mod-ksocket
+ksocket[Ver:TVB1.0.4.532.50-8]
+ortp[Ver:TVB1.0.4.532.50-28]
+init mod-acodec
+acodec[Ver:TVB1.0.4.532.50-8]
+random: nonblocking pool is initialized
+init mod-foip3
+foip3[Ver:TVB1.0.4.532.50-8]
+init mod-vdsp for 2 channels 4 sessions
+vdsp[Ver:TVB1.0.4.532.50-24]
+
+===============================
+|| MTK DSP init successfully ||
+===============================
+
+dbgTool_init init v2.0
+pcmdump[Ver:TVB1.0.4.532.50-24]
+pi
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000008
+
+
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000002
+
+d 1014's current affinity mask: 1
+pid 1014's new affinity mask: 2
+pi
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000008
+
+d
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000002
+
+ 1009's current affinity mask: 1
+pid 1009's new affinity mask: 2
+pi
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000008
+
+d
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000002
+
+ 1024's current affinity mask: 1
+pid 1024's new affinity mask: 2
+pi
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000008
+
+d
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000002
+
+ 1022's current affinity mask: 1
+pid 1022's new affinity mask: 2
+pi
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000008
+
+
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000002
+
+d 1023's current affinity mask: 1
+pid 1023's new affinity mask: 2
+Loading KLPD driver...
+init_userport_to_dev: i: 0, name: eth3, ifindex: 8
+init_userport_to_dev: i: 1, name: eth2, ifindex: 7
+init_userport_to_dev: i: 2, name: eth1, ifindex: 6
+init_userport_to_dev: i: 3, name: eth0, ifindex: 5
+[KLPD] the max pending pack:100
+klpdCoreInit : init klpd
+Start applications...
+up port 0
+up port 1
+up port 2
+up port 3
+mtcphy[1]: Link-down!!!
+ip_tables: (C) 2000-2006 Netfilter Core Team
+insmod: can't read '/lib/modules/3.18.21/nf_conntrack.ko': No such file or directory
+insmod: can't read '/lib/modules/3.18.21/nf_nat.ko': No such file or directory
+insmod: can't read '/lib/modules/3.18.21/nfnetlink_queue.ko': No such file or directory
+insmod: can't read '/lib/modules/3.18.21/xt_mark.ko': No such file or directory
+Copy omci capability files...
+/usr/exe/mtk_setup.sh: line 60: copy_omci_cfg_files: not found
+Start appmgr...
+[INIT] app starting...
+cat: can't open '/configs/valgrind_module.cfg': No such file or directory
+Start_voice...
+cp: can't stat '/usr/etc/alcatel/config/vpp_tr69': No such file or directory
+/bin/sh: /sbin/pppoedial: not found
+$Starting system message bus:
+/bin/sh: /sbin/usrbh: not found
+====================@Voice started@=================
+Start cfmmgr...
+Start web server...
+/usr/exe/mtk_setup.sh: line 60: /sbin/cfmmgr: not found
+
+
+mipsmt_sys_sched_setaffinity new_mask origin value is 00000008
+
+
+
+mipsmt_sys_sched_setaffinity new_mask changed value is 00000002
+
+mtphy[1]:Link-up at 1000 F.
+ALL 0x1E,0x9B =0x303
+ALL 0x1E,0x9C =0x305
+BB1 lch_mse_mdcA =0x3
+BB2 lch_mse_mdcB =0x3
+BB3 lch_mse_mdcC =0x3
+BB4 lch_mse_mdcD =0x5
+Start diagnosis
+self test...
+rgwd starting ...
+ flag->commit =[0]
+ flag->next_active =[0]
+ flag->image0_is_valid =[-1]
+ flag->image1_is_valid =[-1]
+ flag->boot_fail_num =[1]
+system_call+146: touch /tmp/WLAN_IS_RUNNING
+ONTUSER
+socket: Protocol not supported
+um_nl_init failed!!!
+logrotate: Logdir /var/log/ missing
+Generating syslog.conf
+syslogd starting
+klogd starting
+opid = VIET
+partNumber = 3FE46598
+variant = AAAA
+BOSA module access OK!
+phy[0]_id = 0x3a29412
+phy[1]_id = 0x3a29412
+phy[2]_id = 0x3a29412
+phy[3]_id = 0x3a29412
+No usb device detected on the board USBc
+Watchdog cannot be stopped once started.
+TC3162 hardware watchdog initialized
+aaabbbccc deamon.c omciMgr
+ flag->commit =[0]
+ flag->next_active =[0]
+ flag->image0_is_valid =[-1]
+ flag->image1_is_valid =[-1]
+ flag->boot_fail_num =[1]
+
+AONT login: initMemoryMngt(): potsNum = 2, adjust_syssemi_size = 692224, adjust_sysheap_size = 614400
+
+ common_pools: need 149248 bytes memory
+ msgbuf_pool_appl: need 117584 bytes memorynr_commands=0,max_links=200
+redirect_mode_set 138 mode=2
+nr_commands=1,max_links=200
+nr_commands=2,max_links=200
+nr_commands=3,max_links=200
+/configs/alcatel/config/cvpd.cmd not found.
+get upgrade flags: commit=0 next_active=0 image0_is_valid=-1 image1_is_valid=-1 boot_fail_num=1 get image flags: active=0 part_number=3FE46598AA image0_version=3FE46606BFGB87 image1_version=3FE46606BFGB87 debug level: 5, dest=2
+cfgmgr starting, OperatorID: VIET
+SipwStartup, fetched maxPrtZips=2
+nr_commands=4,max_links=200
+=== MsgHandler::initTable : partNumber =3FE46598 ===
+nr_commands=5,max_links=200
+
+ GVHW initialization, current onu_maxlines 2 is
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[0] version=3FE46606BFGB87
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[1] version=3FE46606BFGB87
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[0] version=3FE46606BFGB87
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[1] version=3FE46606BFGB87
+MTK solution, use LE9652, Internal slac.
+nr_commands=6,max_links=200
+Create sipwQ =65538
+nr_commands=7,max_links=200
+VDSP_GetInstance:275
+[Adam] Change log level to (EVA_LOG_ERR).
+[GDI] Change log level to (EVA_LOG_ERR).
+nr_commands=8,max_links=200
+
+#sipcommon_root start
+nr_commands=9,max_links=200
+
+#InitCommon start
+nr_commands=10,max_links=200
+nr_commands=11,max_links=200
+nr_commands=12,max_links=200
+[sys] yapi registerContainer(cid): 4
+leave tm_event()
+nr_commands=13,max_links=200
+nr_commands=14,max_links=200
+nr_commands=15,max_links=200
+
+#pmc start
+
+#vm start
+
+#linetest start
+
+SLID Disablednr_commands=16,max_links=200
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[0] version=3FE46606BFGB87
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[1] version=3FE46606BFGB87
+============================== cfgmgr starting ================================
+IPInterface.1.Enable=true
+LAN1.Enable=true
+productname = G-240W-F
+start load custom config
+[INIT] start init RG slow path. isHGU:1,numPort: 4
+max port num: 4sal_netModelInit:L1517 [DEBUG]: to be implemented for brcm
+[INIT] exit init RG slow path
+Fill DB initial values.
+ERR sal_hgu_init: t= match_idx = 4 first_unused = 0
+33:465 Invoked
+ERR hal_hgu_qos_init:Entering Function
+be ready to run:sal_route_mac_add.
+Alarm instance number is 4
+insmod: can't insert '/lib/modules/3.18.21/usb-storage.ko': File exists
+init usb error!
+configDeviceIdentityOnBoot: OperatorID VIET
+get_device_identity ALCLB1C83775
+870 @ NLMonitorInit
+NLMonitorInit failed -1
+NLMonitorInit failed: Protocol not supported
+1025 @ cfgRpc_serverStart
+NLMonitorInit failed
+ip6tables v1.4.16.3: Couldn't find target `DEFAULT_DSCP'
+
+Try `ip6tables -h' or 'ip6tables --help' for more information.
+ip6tables v1.4.16.3: Couldn't find target `QOS_DSCP'
+
+Try `ip6tables -h' or 'ip6tables --help' for more information.
+ip6tables v1.4.16.3: Couldn't find target `IGMP_DSCP'
+
+Try `ip6tables -h' or 'ip6tables --help' for more information.
+ModuleName: G-240W-F
+config_device_type: OperatorID VIET
+####onu type = HGU####
+bootHguFunc
+2750 @ cfg_bootFunc
+fid 34 not found
+cfg_bootUps: start ups now !
+cfg_bootportmgr: start portmgr now !
+cfg_bootparser: start parser now !
+ UPS main() is starting........
+ PortMgr main() is starting........
+ flag->commit =[0]
+ flag->next_active =[0]
+ flag->image0_is_valid =[-1]
+ flag->image1_is_valid =[-1]
+ flag->boot_fail_num =[1]
+get upgrade flags: commit=0 next_active=0 image0_is_valid=-1 image1_is_valid=-1 boot_fail_num=1 get image flags: active=0 part_number=3FE46598AA image0_version=3FE46606BFGB87 image1_version=3FE46606BFGB87 get upgrade flags: commit=0 next_active=0 image0_is_valid=-1 image1_is_valid=-1 boot_fail_num=1 get image flags: active=0 part_number=3FE46598AA image0_version=3FE46606BFGB87 image1_version=3FE46606BFGB87 isInitializedParser()
+
+ cfg_bootomciMgr: VOICE is configured as TR069 manually
+cfg_bootomciMgr: start omciMgr now !
+ flag->commit =[0]
+ flag->next_active =[0]
+ flag->image0_is_valid =[-1]
+ flag->image1_is_valid =[-1]
+ flag->boot_fail_num =[1]
+>>>isBatteryPower(0), isBatteryMissing(0), isBatteryFailure(0), isBatteryLow(0)
+<<<<<<SAL_ChangeLEDByPowerState()>>>>>>
+>>>>>>BoardType=25
+get upgrade flags: commit=0 next_active=0 image0_is_valid=-1 image1_is_valid=-1 boot_fail_num=1 get image flags: active=0 part_number=3FE46598AA image0_version=3FE46606BFGB87 image1_version=3FE46606BFGB87 544 @ cfg_bootHostInfo
+starting lanhostd -m 0 ...
+[ERROR fwdDrvIoctlFct 196]: unknown cmd 18.
+ri.c@get_ssid_itf_name: board type = 80
+ri.c@get_ssid_itf_name: board type = 80
+2.4g ifname[ra0] 5g ifname[rai0]
+lanhostd is running, debug level: 2, arp interval: 5, expire: 86400 led_mode=0
+Not StartUpEponSpeedCheck
+sh: can't open '/bcm/script/load.dongle.sh'
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+mtk_swdl_get_image_version : image[0] version=3FE46606BFGB87
+free one time entry
+484 @ rutLan_updateStaticDhcpCfg
+currObj or newObj is NULL
+dhcp_cond_flag: 0, dhcp_pool_iptv_count: 0
+pid_fd 3  pid==1467
+dhcpd - pid 1467, server: 0, start: c0a80164, end: c0a80165, max_lease: 254, interface: br0, lease: 86400
+Ebtables v2.0 registered
+Sorry, rule does not exist.
+brctl: bridge br0: File exists
+[ERROR vlanctl] get_assigned_mac, 323: name: gpon0.ani not support
+[ERROR vlanctl] save_assigned_mac, 373: name: gpon0.ani not support
+[ERROR vlanctl] get_assigned_mac, 323: name: veip0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: veip0 not support
+[ERROR vlanctl] get_assigned_mac, 323: name: voip0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: voip0 not support
+RTNETLINK answers: File exists
+IPv6: ADDRCONF(NETDEV_UP): br_sfu: link is not ready
+device wan0 entered promiscuous mode
+br_sfu: port 1(wan0) entered forwarding state
+br_sfu: port 1(wan0) entered forwarding state
+IPv6: ADDRCONF(NETDEV_CHANGE): br_sfu: link becomes ready
+[ERROR vlanctBCMVLAN : eth3 mode was set to RG
+l] get_assigned_mac, 323: name: eth3.0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: eth3.0 not support
+
+JON: rut_initHguAddLan2Bridge...., vif_name is: eth3.0
+device eth3.0 entered promiscuous mode
+device eth3 entered promiscuous mode
+br0: port 1(eth3.0) entered forwarding state
+br0: port 1(eth3.0) entered forwarding state
+hal_misc_config_port_mcast_filter not required for mtk....
+nr_commands=17,max_links=200
+[ERROR vlaBCMVLAN : eth2 mode was set to RG
+nctl] get_assigned_mac, 323: name: eth2.0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: eth2.0 not support
+
+JON: rut_initHguAddLan2Bridge...., vif_name is: eth2.0
+device eth2.0 entered promiscuous mode
+device eth2 entered promiscuous mode
+br0: port 2(eth2.0) entered forwarding state
+br0: port 2(eth2.0) entered forwarding state
+hal_misc_config_port_mcast_filter not required for mtk....
+
+rut_initHguAddLan2Bridge...........
+device eth1 entered promiscuous mode
+br_sfu: port 2(eth1) entered forwarding state
+br_sfu: port 2(eth1) entered forwarding state
+
+rut_initHguAddLan2Bridge...........
+device eth0 entered promiscuous mode
+br_sfu: port 3(eth0) entered forwarding state
+br_sfu: port 3(eth0) entered forwarding state
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+rm: can't remove '/tmp/cgi_session': No such file or directory
+RTNETLINK answers: File exists
+rm: can't remove '/tmp/cgi_session': No such file or directory
+killall: udhcpd: no process killed
+pid_fd 3  pid==1630
+dhcpd - pid 1630, server: 0, start: c0a80164, end: c0a80165, max_lease: 254, interface: br0, lease: 86400
+[INIT] Init the lan port with enable, speed and duplex values
+phy_set_EthMode port:3 speed:3 mode:2 status:1 ethmode:0x1ff0a
+phy_set_EthMode port:2 speed:3 mode:2 status:1 ethmode:0x1ff0a
+phy_set_EthMode port:1 speed:3 mode:2 status:1 ethmode:0x1ff0a
+phy_set_EthMode port:0 speed:3 mode:2 status:1 ethmode:0x1ff0a
+mtcphy[1]: Link-down!!!
+
+dnsproxy is started with pid=1636
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+iptables: Chain already exists.
+mtphy[1]:Link-up at 1000 F.
+ALL 0x1E,0x9B =0x303
+ALL 0x1E,0x9C =0x304
+BB1 lch_mse_mdcA =0x3
+BB2 lch_mse_mdcB =0x3
+BB3 lch_mse_mdcC =0x3
+BB4 lch_mse_mdcD =0x4
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+prepare
+set obc limitation successfulUserAgentPort=5060 liuchi
+localPortMin=50000 localPortMax=50100 liuchi
+killall: dropbear: no process killed
+Starting Dropbear SSH server: dropbear.
+WARNING: The state match is obsolete. Use conntrack instead.
+ctnetlink v0.93: registering with nfnetlink.
+conntrack v1.0.0 (conntrack-tools): 0 flow entries have been deleted.
+[INIT] LanAccess done
+[Jan 01 07:00:47] radvd: version 1.6 started
+enter hal_lpd_init
+enter hal_lpd_set_port_info
+enter hal_lpd_set_port_info
+enter hal_lpd_set_port_info
+enter hal_lpd_set_port_info
+hal_phy_apd_set not required for mtk....
+hal_phy_eee_set not required for mtk....
+1970-01-01 07:00:47[de]cfdebug_print: <3>[option] (6)
+1970-01-01 07:00:47[de]cfdebug_print: <3>[domain-name-servers] (19)
+1970-01-01 07:00:47[de]cfdebug_print: <3>[fe80::1] (7)
+1970-01-01 07:00:47[de]cfdebug_print: <3>end of sentence [;] (1)
+1970-01-01 07:00:47[de]cfdebug_print: <3>[interface] (9)
+1970-01-01 07:00:47[de]cfdebug_print: <5>[br0] (3)
+1970-01-01 07:00:47[de]cfdebug_print: <3>begin of closure [{] (1)
+1970-01-01 07:00:47[de]cfdebug_print: <3>end of closure [}] (1)
+1970-01-01 07:00:47[de]cfdebug_print: <3>end of sentence [;] (1)
+1970-01-01 07:00:47[de]configure_pool: called
+Opening file failed. fopen error:
+: No such file or directory
+Jan/01/1970 07:00:47: main: Vendor Specific Information is not stored
+1970-01-01 07:00:47[de]configure_interface: ENTER
+1970-01-01 07:00:47[de]configure_interface: EXIT
+1970-01-01 07:00:47[de]clear_poolconf: called
+Jan/01/1970 07:00:47: dhcp6_ctl_authinit: failed to open /etc/dhcp6sctlkey: No such file or directory
+1970-01-01 07:00:47[de]lease_init: called
+1970-01-01 07:00:47[de]gethwid: found an interface br0 for DUID
+1970-01-01 07:00:47[de]get_duid: generated a new DUID: 00:03:00:01:ec:b3:13:ee:cb:50
+1970-01-01 07:00:47[de]get_duid: saved generated DUID to /var/dhcp6s_duid
+wand starting with pid 2162
+wand starting ... interval = 60
+net.ipv4.ping_group_range = 0 0
+wifi number = 1!
+cvp_proxy_init: register GMI queue
+
+ cvp_proxy_init: register GMI: CVP for alarmg_eventQ msg_qbytes=  300000
+add new wan info 3,interface=,ip=
+ri.c@get_ssid_itf_name: board type = 80
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 25
+plat_set_irq_affinity: irq num 25
+TX_BCN DESC ad4d4000 size = 320
+RX[0] DESC ad4d6000 size = 2048
+RX[1] DESC ad4d7000 size = 2048
+E2pAccessMode=4
+cfg_mode=9
+cfg_mode=9
+wmode_band_equal(): Band Equal!
+IF(ap) ApCfg_Set_MaxAssocNum_Proc::(MaxAssocNum=32)
+Key1Str is Invalid key length(1) or Type(0)
+Key1Str is Invalid key length(1) or Type(0)
+Key1Str is Invalid key length(1) or Type(0)
+Key1Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+[PMF]Set_PMFMFPC_Proc:: apidx=0, Desired MFPC=0
+[PMF]Set_PMFMFPR_Proc:: apidx=0, Desired MFPR=0
+[PMF]Set_PMFSHA256_Proc:: apidx=0, Desired PMFSHA256=0
+PS_RETRIEVE = 1
+FW Version:ap_pcie
+FW Build Date:20160107100755
+CmdAddressLenReq:(ret = 0)
+CmdFwStartReq: override = 1, address = 1048576
+CmdStartDLRsp: WiFI FW Download Success
+AsicDMASchedulerInit(): DMA Scheduler Mode=0(LMAC)
+efuse_probe: efuse = 10000002
+RtmpChipOpsEepromHook::e2p_type=4, inf_Type=5
+RtmpEepromGetDefault::e2p_dafault=1
+RtmpChipOpsEepromHook: E2P type(4), E2pAccessMode = 4, E2P default = 1
+NVM is BIN mode
+1. Phy Mode = 14
+Cal Free IC!!
+@@@  NICReadEEPROMParameters : pAd->FWLoad=0
+now bb MainSsid mac ec:b3:13:ee:cb:59
+Country Region from e2p = ffff
+tssi_1_target_pwr_g_band = 30
+2. Phy Mode = 14
+3. Phy Mode = 14
+NICInitPwrPinCfg(14): Not support for HIF_MT yet!
+NICInitializeAsic(585): Not support rtmp_mac_sys_reset () for HIF_MT yet!
+mt_mac_init()-->
+mt7603_init_mac_cr()-->
+AsicSetMacMaxLen(1826): Set the Max RxPktLen=1024!
+<--mt_mac_init()
+        WTBL Segment 1 info:
+                MemBaseAddr/FID:0x28000/0
+                EntrySize/Cnt:32/128
+        WTBL Segment 2 info:
+                MemBaseAddr/FID:0x40000/0
+                EntrySize/Cnt:64/128
+        WTBL Segment 3 info:
+                MemBaseAddr/FID:0x42000/64
+                EntrySize/Cnt:64/128
+        WTBL Segment 4 info:
+                MemBaseAddr/FID:0x44000/128
+                EntrySize/Cnt:32/128
+MtAsicACQueue: Write CR:21510, Value=10421
+MtAsicACQueue: Write CR:21500, Value=10421
+AntCfgInit(2574): Not support for HIF_MT yet!
+RTMPSetPhyMode(): channel out of range, use first ch=0
+MCS Set = ff ff 00 00 00
+[PMF]ap_pmf_init:: apidx=0, MFPC=0, MFPR=0, SHA256=0
+[PMF]RTMPMakeRsnIeCap: RSNIE Capability MFPC=0, MFPR=0
+[PMF]ap_pmf_init:: apidx=1, MFPC=0, MFPR=0, SHA256=0
+[PMF]ap_pmf_init:: apidx=2, MFPC=0, MFPR=0, SHA256=0
+[PMF]ap_pmf_init:: apidx=3, MFPC=0, MFPR=0, SHA256=0
+AsicSetRalinkBurstMode(4148): Not support for HIF_MT yet!
+RTMPSetPiggyBack(876): Not support for HIF_MT yet!
+AsicSetTxPreamble(4135): Not support for HIF_MT yet!
+AsicAddSharedKeyEntry(1992): Not support for HIF_MT yet!
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+AsicSetPreTbtt(): bss_idx=0, PreTBTT timeout = 0xa0
+Main bssid = ec:b3:13:ee:cb:59
+<==== rt28xx_init, Status=0
+@@@ ed_monitor_init : ===>
+@@@ ed_monitor_init : <===
+mt7603_set_ed_cca: TURN ON EDCCA mac 0x10618 = 0xd7c87d0f, EDCCA_Status=1
+jiffies=ffff9f18, POLLING_MODE_DETECT_INTV=300
+WiFi Startup Cost (ra0): 3.480s
+ri.c@get_ssid_brctl_name: board type = 0x50
+[ERROR vlBCMVLAN : ra0 mode was set to RG
+anctl] get_assigned_mac, 323: name: ra0.v0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: ra0.v0 not support
+
+rut_initWLanBridge.......
+device ra0.v0 entered promiscuous mode
+device ra0 entered promiscuous mode
+br0: port 3(ra0.v0) entered forwarding state
+br0: port 3(ra0.v0) entered forwarding state
+ri.c@get_ssid_itf_name: board type = 80
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+##### mbss_cr_enable, BssId = 1
+ri.c@get_ssid_brctl_name: board type = 0x50
+[ERROR vlBCMVLAN : ra1 mode was set to RG
+anctl] get_assigned_mac, 323: name: ra1.v0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: ra1.v0 not support
+
+rut_initWLanBridge.......
+device ra1.v0 entered promiscuous mode
+device ra1 entered promiscuous mode
+br0: port 4(ra1.v0) entered forwarding state
+br0: port 4(ra1.v0) entered forwarding state
+ri.c@get_ssid_itf_name: board type = 80
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+##### mbss_cr_enable, BssId = 2
+ri.c@get_ssid_brctl_name: board type = 0x50
+[ERROR vlBCMVLAN : ra2 mode was set to RG
+anctl] get_assigned_mac, 323: name: ra2.v0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: ra2.v0 not support
+
+rut_initWLanBridge.......
+device ra2.v0 entered promiscuous mode
+device ra2 entered promiscuous mode
+br0: port 5(ra2.v0) entered forwarding state
+br0: port 5(ra2.v0) entered forwarding state
+ri.c@get_ssid_itf_name: board type = 80
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+##### mbss_cr_enable, BssId = 3
+ri.c@get_ssid_brctl_name: board type = 0x50
+[ERROR vlBCMVLAN : ra3 mode was set to RG
+anctl] get_assigned_mac, 323: name: ra3.v0 not support
+[ERROR vlanctl] save_assigned_mac, 373: name: ra3.v0 not support
+
+rut_initWLanBridge.......
+device ra3.v0 entered promiscuous mode
+device ra3 entered promiscuous mode
+br0: port 6(ra3.v0) entered forwarding state
+br0: port 6(ra3.v0) entered forwarding state
+hal_misc_config_wlan_mcast_filter not required for mtk....
+ri.c@get_ssid_itf_name: board type = 80
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+ri.c@get_ssid_itf_name: board type = 80
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+ri.c@get_ssid_itf_name: board type = 80
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+ri.c@get_ssid_itf_name: board type = 80
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+
+ cvp initialized report received:succeeded!
+sh: /script/zeroman/cfg_image_path.sh: not found
+fgets exec error.
+
+ cfg_image_path xml no exist
+ embeddedXMLCheck, 409: Precofig OperatorID [VIET]
+isSameFile:system cmd diff -q /usr/etc/alcatel/config/precfg/ftpprofile_viettel.xml /configs/alcatel/config/ftpprofile_embedded.xml > /tmp/xmlDiff.
+isSameFile return TRUE
+is_embedded_xml_in_use,6602: Precofig OperatorID [VIET].
+
+ ipc_rcv_waiti: Warning, data may be truncated, size =33, len=112 ~~~The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+br0: port 3(ra0.v0) entered disabled state
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+br0: port 4(ra1.v0) entered disabled state
+nr_commands=18,max_links=200
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+br0: port 5(ra2.v0) entered disabled state
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+MTPciPollTxRxEmpty
+
+getVppEventQid:  VPP EVENT message queue [360459] has been creatediptables: Bad rule (does a matching rule exist in that chain?).
+br_sfu: port 1(wan0) entered forwarding state
+
+TEST---free sys memory 0xf4d848
+enable_t38_same_with_voice 0
+
+TEST[4294942863][slic][ERR][le9652_shutdownHw:L671]le9652_shutdownHw
+---fr[4294942864][slic][ERR][le9652_shutdownHw:L671]ele9652_shutdownHw
+e sys[4294942865][slic][INFO][SLIC_Reset:L328]slic reset num:0
+ memory 0xee15b0
+[4294942872][slic][INFO][SLIC_Reset:L338]slic reset num:0
+[4294942879][slic][INFO][SLIC_Init:L623]FXS_NUM=2 FXO_NUM=0
+[4294942880][slic][INFO][le9652_deviceInit:L445]le9652_deviceInit 0
+[4294942881][slic][INFO][le9652_slicParamReset:L199]le9652_slicParamReset Successful(CountryCode=RSV1)
+[4294942883][slic][INFO][le9652_deviceInit:L478]le9652 Init .
+br0: port 1(eth3.0) entered forwarding state
+AsicSetPreTbtt(): bss_idx=0, PreTBTT timeout = 0x0
+RTMPSetPiggyBack(876): Not support for HIF_MT yet!
+
+ ipc_rcv_waiti: Warning, data may be truncated, size =RT28xxPciAsicRadioOff(): Not support for HIF_MT yet!
+RTMPDrvClose call RT28xxPciAsicRadioOff fail !!
+tx_kickout_fail_count = 0
+tx_timeout_fail_count = 0
+rx_receive_fail_count = 0
+alloc_cmd_msg = 94
+free_cmd_msg = 94
+112, len=116 ~~~br0: port 2(eth2.0) entered forwarding state
+.
+br_sfu: port 2(eth1) entered forwarding state
+br_sfu: port 3(eth0) entered forwarding state
+[4294943022][slic][INFO][le9652_deviceInit:L493]
+le9652_Init_Cnt = 154
+[4294943022][slic][INFO][le9652_deviceInit:L545]CODEC_LINEAR setting
+[4294943023][slic][INFO][le9652_deviceInit:L586]FXS-0 timeslot:2
+[4294943024][slic][INFO][le9652_deviceInit:L600]FXS-1 timeslot:3
+[4294943024][slic][INFO][le9652_deviceInit:L617]fxs0 gain--TX :4000 RX: 4000
+[4294943025][slic][INFO][le9652_deviceInit:L617]fxs1 gain--TX :4000 RX: 4000
+[4294943026][slic][INFO][SLIC_Init:L623]FXS_NUM=2 FXO_NUM=0
+[4294943026][slic][WARN][le9652_deviceInit:L438]Bypass le9652_deviceInit on Device 1!
+br0: port 6(ra3.v0) entered disabled state
+plat_set_irq_affinity: cpu 0
+plat_set_irq_affinity: cpu 0 vpe_id 0
+plat_set_irq_affinity: irq_vpe0 1 irq_vpe1 0, irq = 25
+plat_set_irq_affinity: irq num 25
+TX_BCN DESC ad4d4000 size = 320
+RX[0] DESC ad4d6000 size = 2048
+RX[1] DESC ad4d7000 size = 2048
+
+TEST---free sys memory 0xf41ae0
+E2pAccessMode=4
+cfg_mode=9
+cfg_mode=9
+wmode_band_equal(): Band Equal!
+IF(ap) ApCfg_Set_MaxAssocNum_Proc::(MaxAssocNum=32)
+Key1Str is Invalid key length(1) or Type(0)
+Key1Str is Invalid key length(1) or Type(0)
+Key1Str is Invalid key length(1) or Type(0)
+Key1Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key2Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key3Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+Key4Str is Invalid key length(1) or Type(0)
+[PMF]Set_PMFMFPC_Proc:: apidx=0, Desired MFPC=0
+[PMF]Set_PMFMFPR_Proc:: apidx=0, Desired MFPR=0
+[PMF]Set_PMFSHA256_Proc:: apidx=0, Desired PMFSHA256=0
+PS_RETRIEVE = 1
+FW Version:ap_pcie
+FW Build Date:20160107100755
+AsicDMASchedulerInit(): DMA Scheduler Mode=0(LMAC)
+efuse_probe: efuse = 10000002
+RtmpChipOpsEepromHook::e2p_type=4, inf_Type=5
+RtmpEepromGetDefault::e2p_dafault=1
+RtmpChipOpsEepromHook: E2P type(4), E2pAccessMode = 4, E2P default = 1
+NVM is BIN mode
+1. Phy Mode = 14
+Cal Free IC!!
+@@@  NICReadEEPROMParameters : pAd->FWLoad=1
+now bb MainSsid mac ec:b3:13:ee:cb:59
+Country Region from e2p = ffff
+tssi_1_target_pwr_g_band = 30
+2. Phy Mode = 14
+3. Phy Mode = 14
+NICInitPwrPinCfg(14): Not support for HIF_MT yet!
+NICInitializeAsic(585): Not support rtmp_mac_sys_reset () for HIF_MT yet!
+mt_mac_init()-->
+mt7603_init_mac_cr()-->
+AsicSetMacMaxLen(1826): Set the Max RxPktLen=1024!
+<--mt_mac_init()
+        WTBL Segment 1 info:
+                MemBaseAddr/FID:0x28000/0
+                EntrySize/Cnt:32/128
+        WTBL Segment 2 info:
+                MemBaseAddr/FID:0x40000/0
+                EntrySize/Cnt:64/128
+        WTBL Segment 3 info:
+                MemBaseAddr/FID:0x42000/64
+                EntrySize/Cnt:64/128
+        WTBL Segment 4 info:
+                MemBaseAddr/FID:0x44000/128
+                EntrySize/Cnt:32/128
+MtAsicACQueue: Write CR:21510, Value=10421
+MtAsicACQueue: Write CR:21500, Value=10421
+AntCfgInit(2574): Not support for HIF_MT yet!
+RTMPSetPhyMode(): channel out of range, use first ch=0
+MCS Set = ff ff 00 00 00
+enable_t38_same_with_voice 0
+pop_configVpsSipServerReq custom(except for telmex) will set RegistrarServer as sip server
+
+ delete server start
+ pop_unconfigVpsSipServerReq:: iobpValidCount: 0, iobpDelcount: 0, delete count: 0
+ delete server end result : 0RegistrarServer =, OutboundProxy =
+pMsg->domainName =
+iptables: Bad rule (does a matching rule exist in that chain?).
+iptables: No chain/target/match by that name.
+
+getVppEventQid:  VPP EVENT message queue [360459] has been created
+TEST---free sys memory 0xf41ae0
+149 @ cfgRts_dispatchVoiceDataDispatch object targetOid = 315 data failed
+
+
+ get_LineId_FromTr069Hdr, 693: OperatorID [VIET]
+
+getVppEventQid:  VPP EVENT message queue [360459] has been created
+TEST---free sys memory 0xf451e0
+enable_t38_same_with_voice 0
+
+TEST---free sys memory 0xf47fb0
+
+TEST---free sys memory 0xf52530
+
+TEST---free sys memory 0xf52530
+
+TEST---free sys memory 0xf52530
+[PMF]ap_pmf_init:: apidx=0, MFPC=0, MFPR=0, SHA256=0
+[PMF]RTMPMakeRsnIeCap: RSNIE Capability MFPC=0, MFPR=0
+[PMF]ap_pmf_init:: apidx=1, MFPC=0, MFPR=0, SHA256=0
+[PMF]ap_pmf_init:: apidx=2, MFPC=0, MFPR=0, SHA256=0
+[PMF]ap_pmf_init:: apidx=3, MFPC=0, MFPR=0, SHA256=0
+AsicSetRalinkBurstMode(4148): Not support for HIF_MT yet!
+RTMPSetPiggyBack(876): Not support for HIF_MT yet!
+AsicSetTxPreamble(4135): Not support for HIF_MT yet!
+AsicAddSharedKeyEntry(1992): Not support for HIF_MT yet!
+The 4-BSSID mode is enabled, the BSSID byte5 MUST be the multiple of 4
+AsicSetPreTbtt(): bss_idx=0, PreTBTT timeout = 0xa0
+Main bssid = ec:b3:13:ee:cb:59
+<==== rt28xx_init, Status=0
+@@@ ed_monitor_init : ===>
+@@@ ed_monitor_init : <===
+mt7603_set_ed_cca: TURN ON EDCCA mac 0x10618 = 0xd7c87d0f, EDCCA_Status=1
+jiffies=ffffa276, POLLING_MODE_DETECT_INTV=300
+WiFi Startup Cost (ra0): 3.210s
+br0: port 3(ra0.v0) entered forwarding state
+br0: port 3(ra0.v0) entered forwarding state
+ifconfig: SIOCSIFHWADDR: Operation not supported
+103 @ cfg_callVoiceRtsFuncget object error
+
+149 @ cfgRts_dispatchVoiceDataDispatch object targetOid = 334 data failed
+
+
+ bssid = ec:b3:13:ee:cb:59
+
+ bssid = ee:b3:13:de:cb:59
+
+ bssid = ee:b3:13:ee:cb:59
+
+ bssid = ee:b3:13:fe:cb:59
+
+TEST---free sys memory 0xf451e0
+
+TEST---free sys memory 0xf47fb0
+
+TEST---free sys memory 0xf52530
+103 @ cfg_callVoiceRtsFuncget object error
+
+149 @ cfgRts_dispatchVoiceDataDispatch object targetOid = 334 data failed
+
+149 @ cfgRts_dispatchVoiceDataDispatch object targetOid = 286 data failed
+
+Depth:3, iid={ 1 3 1 }
+Depth:3, iid={ 1 4 1 }
+
+ enter cfgmgr_handle_event msg_id = MSG_DHCP_RESULT_NOTIFY_TO_OMCILIB
+Function stl_WifiScheduleObject() is called
+add new wan info 4,interface=,ip=192.168.1.51
+open_socket: socket created on
+2750 @ cfg_bootFunc
+fid 8 not found
+killall: crond: no process killed
+Jan  1 07:01:03 crond[2374]: crond: crond (busybox 1.16.0) started, log level 8
+get upgrade flags: commit=0 next_active=0 image0_is_valid=-1 image1_is_valid=-1 boot_fail_num=1 get image flags: active=0 part_number=3FE46598AA image0_version=3FE46606BFGB87 image1_version=3FE46606BFGB87 ********OMCI Config Data Begin****************
+****ONU Type    : 1
+****onu mode    : 3
+****max lan num : 4
+****max wifi num: 4
+****max wifi id start: 4
+****check wifi state: no
+****voip stream map port: 9
+****wifi port number: 4
+****port 0 config by omci: 0
+****port 1 config by omci: 0
+****port 2 config by omci: 1
+****port 3 config by omci: 1
+****port 4 config by omci: 0
+****port 5 config by omci: 0
+****port 6 config by omci: 0
+****port 7 config
+Set board info type = 255
+ Reset igmp snooping.
+by omci: 0
+****dscp to Pbit for untag Config By OMCI: yes
+****support double tag rules us: yes
+****support double tag rules ds: yes
+****support pbit Unmatch Rules: yes
+****support Bcast Unmatch Rules: no
+****support omci manage HGU port: no
+****HGU single port=false
+****support omci replace after ranging : no
+****support Dynamic Tpid : no
+****support Cox : no
+****factory mode: 0
+********OMCI Config Data End****************
+   user_port    class       domain
+===================================
+      1          ETH         HGU
+      2          ETH         HGU
+      3          ETH         SFU
+      4          ETH         SFU
+      1         WIFI         HGU
+      2         WIFI         HGU
+      3         WIFI         HGU
+      4         WIFI         HGU
+      9         POTS         SFU
+      1         UNKW         HGU
+===================================
+opid = VIET
+partNumber = 3FE46598
+variant = AAAA
+BOSA module access OK!
+phy[0]_id = 0x3a29412
+phy[1]_id = 0x3a29412
+phy[2]_id = 0x3a29412
+phy[3]_id = 0x3a29412
+No usb device detected on the board USBc
+opid = VIET
+partNumber = 3FE46598
+variant = AAAA
+sh: can't create /proc/kum_igmp: nonexistent directory
+led_mode=0 is_intercept_enabled=0
+BOSA module access OK!
+phy[0]_id = 0x3a29412
+phy[1]_id = 0x3a29412
+phy[2]_id = 0x3a29412
+phy[3]_id = 0x3a29412
+No usb device detected on the board USBc
+Current boardType = 255
+InitPortStream() maxPort=9, enet=8,moca=0
+InitPortStream:: ONU type is HGU
+Use extend flow service
+EthManageItf::getInstance: without switch.
+Bridge-Interface:[1]'s type:[1].
+hal_eth_set_port_domain userport 1, domain isHGU 1 ,type:0
+hal_eth_cfg_port_forwarding_mode not required for mtk....
+Bridge-Interface:[2]'s type:[1].
+hal_eth_set_port_domain userport 2, domain isHGU 1 ,type:0
+hal_eth_cfg_port_forwarding_mode not required for mtk....
+Bridge-Interface:[3]'s type:[0].
+be ready to set Priority for Bridge-Interface:[3].
+get the port:[3]'s PhyPort:[1] info for Board:[G-240W-F] Success.
+hal_eth_set_port_domain userport 3, domain isHGU 0 ,type:0
+Bridge-Interface:[4]'s type:[0].
+be ready to set Priority for Bridge-Interface:[4].
+get the port:[4]'s PhyPort:[0] info for Board:[G-240W-F] Success.
+hal_eth_set_port_domain userport 4, domain isHGU 0 ,type:0
+Bridge-Interface:[1]'s type:[1].
+hal_eth_set_port_domain userport 1, domain isHGU 1 ,type:1
+hal_eth_cfg_port_forwarding_mode not required for mtk....
+Bridge-Interface:[2]'s type:[1].
+hal_eth_set_port_domain userport 2, domain isHGU 1 ,type:1
+hal_eth_cfg_port_forwarding_mode not required for mtk....
+Bridge-Interface:[3]'s type:[1].
+hal_eth_set_port_domain userport 3, domain isHGU 1 ,type:1
+hal_eth_cfg_port_forwarding_mode not required for mtk....
+Bridge-Interface:[4]'s type:[1].
+hal_eth_set_port_domain userport 4, domain isHGU 1 ,type:1
+hal_eth_cfg_port_forwarding_mode not required for mtk....
+
+main: msgget action_process qid failed, err = 2, No such file or directory
+
+main: msgget action_process qid failed, err = 2, No such file or directory
+PORT_CONFIG_DATA message received
+timer created successfully with id 84fee8
+timer created successfully with id 84ff78
+Voice Service PortMgr Created!
+timer created successfully with id 8500e0
+timer created successfully with id 850170
+Eth Service PortMgr Created!
+reset_all_tsched ...
+hal_itf_qos.cc:hal_qos_init_tc_method is not implemented, TBD.
+hal_itf_qos.cc:hal_qos_ds_init_emac_queue is not implemented, TBD.
+enter
+currwan was NULL
+
+GOT INDEX 0
+create WanSub in array 0
+cfg_bootIpDdns
+Enter id=1030101, connId=10301, domainName=
+
+prepare to rgwdInfoListAdd, p=0x937f88
+
+be ready to run the Func:[rutLan_restartDDnsClient].
+operationFlag:[0].
+ -- rm /tmp/ddns_enable 2>/dev/null
+
+Reveive a child signal (sig=18)
+the operateFlag:[0] for the IP-Conn:[0].
+be ready to deal with the DDNS for the IP-Conn:[10301], the ItfName:[pon_2501_2_1].
+UserName:[],Password:[], IfName:[NA], ProviderName:[], IP-Enable:[0].
+be ready to add or modify a new IP-DDNS.ipConn.X_ASB_COM_ConnectionId=10301,connID=0
+the old IP-DDNS-EnableFlag:[0],the new IP-DDNS-EnableFlag:[0], the current IP-DDNS-EnableFlag:[0],.
+dealIPDdnsClient found the matched ip wan connection, finish search
+
+cfg_bootIpDmz
+UserAgentPort=5060 liuchi
+localPortMin=50000 localPortMax=50100 liuchi
+enter
+enter, connectionId 10301
+got WanSub index 0 and  ndk connectionId 10301
+new dmzInfo was disabled
+return
+add dmz index 0
+close_socket: socket closed on
+open_socket: socket created on pon_u_0_1
+enter
+currwan was NULL
+
+GOT INDEX 1
+create WanSub in array 1
+cfg_bootIpDdns
+Enter id=1040101, connId=10401, domainName=
+
+prepare to rgwdInfoListAdd, p=0x938c38
+
+be ready to run the Func:[rutLan_restartDDnsClient].
+operationFlag:[0].
+ -- rm /tmp/ddns_enable 2>/dev/null
+
+checkPonLEDStatus:Fiber disconnected
+#########################G_240W_A:LED:onustate:1################################
+Reveive a child signal (sig=18)
+the operateFlag:[0] for the IP-Conn:[0].
+be ready to deal with the DDNS for the IP-Conn:[10301], the ItfName:[pon_2501_2_1].
+UserName:[],Password:[], IfName:[NA], ProviderName:[], IP-Enable:[0].
+be ready to add or modify a new IP-DDNS.ipConn.X_ASB_COM_ConnectionId=10301,connID=0
+be ready to deal with the DDNS for the IP-Conn:[10401], the ItfName:[pon_u_0_1].
+UserName:[],Password:[], IfName:[NA], ProviderName:[], IP-Enable:[0].
+be ready to add or modify a new IP-DDNS.ipConn.X_ASB_COM_ConnectionId=10401,connID=0
+the old IP-DDNS-EnableFlag:[0],the new IP-DDNS-EnableFlag:[0], the current IP-DDNS-EnableFlag:[0],.
+dealIPDdnsClient found the matched ip wan connection, finish search
+
+cfg_bootIpDmz
+UserAgentPort=5060 liuchi
+localPortMin=50000 localPortMax=50100 liuchi
+enter
+enter, connectionId 10401
+got WanSub index 1 and  ndk connectionId 10401
+new dmzInfo was disabled
+return
+add dmz index 1
+cfg_bootWanLanIpMap
+nf_conntrack_ftp is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_conntrack_ftp.ko
+
+Reveive a child signal (sig=18)
+nf_nat_ftp is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_nat_ftp.ko
+
+Reveive a child signal (sig=18)
+nf_conntrack_h323 is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_conntrack_h323.ko
+
+Reveive a child signal (sig=18)
+nf_nat_h323 is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_nat_h323.ko
+
+Reveive a child signal (sig=18)
+nf_conntrack_sip is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_conntrack_sip.ko
+
+Reveive a child signal (sig=18)
+nf_nat_sip is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_nat_sip.ko
+
+Reveive a child signal (sig=18)
+nf_conntrack_rtsp is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_conntrack_rtsp.ko
+
+nf_conntrack_rtsp v0.7 loading
+port #0: 554
+Reveive a child signal (sig=18)
+nf_nat_rtsp is not in.
+rutIpt -- insmod /lib/modules/`uname -r`/nf_nat_rtsp.ko
+
+nf_nat_rtsp v0.7 loading
+Reveive a child signal (sig=18)
+be ready to exec the cmd:[iptables -D FORWARD -p udp --dport 500 -j REJECT --reject-with icmp-port-unreachable].
+
+IpFIlter -- iptables -D FORWARD -p udp --dport 500 -j REJECT --reject-with icmp-port-unreachable
+
+iptables: No chain/target/match by that name.
+Reveive a child signal (sig=18)
+be ready to exec the cmd:[iptables -D FORWARD -p udp --dport 1701 -j REJECT --reject-with icmp-port-unreachable].
+
+IpFIlter -- iptables -D FORWARD -p udp --dport 1701 -j REJECT --reject-with icmp-port-unreachable
+
+iptables: No chain/target/match by that name.
+Reveive a child signal (sig=18)
+948 @ cfg_bootWan
+[cfg_bootWan] send create alg msg to rgwd!!!Function stl_PreventPortScanEnableObject() is called
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+WARNING: The state match is obsolete. Use conntrack instead.
+[INIT] Set TCP and UDP session timer values done
+[INIT] Start configrate igmp
+igmpIntPortType wifi begin
+igmpIntPortType routeMode(2), inst(1)
+GM:hal_igmp_set_uni_port_type uniport 9 type 1igmpIntPortType routeMode(2), inst(2)
+GM:hal_igmp_set_uni_port_type uniport 10 type 1igmpIntPortType routeMode(2), inst(3)
+GM:hal_igmp_set_uni_port_type uniport 11 type 1igmpIntPortType routeMode(2), inst(4)
+GM:hal_igmp_set_uni_port_type uniport 12 type 1igmpIntPortType wifi end
+ri_get_local_port() input port id=1, output port id=3
+GM:hal_igmp_set_uni_port_type uniport 4 type 1ri_get_local_port() input port id=2, output port id=2
+GM:hal_igmp_set_uni_port_type uniport 3 type 1ri_get_local_port() input port id=3, output port id=1
+GM:hal_igmp_set_uni_port_type uniport 2 type 0ri_get_local_port() input port id=4, output port id=0
+GM:hal_igmp_set_uni_port_type uniport 1 type 0rutIgmp_init()
+rutMld_startMldProxy
+rutMld_stopMldProxy
+killall: mld: no process killed
+enable port snoopinIgmpDrvIoctl: IGMP_IOCTL_SET_WANINFO_IPV6 called!
+g failed: Operation not supported
+enter hal_lpd_init
+initialize loid ...
+call empty_func macFilter.cpp:sal_setPolicy
+iptables: Chain already exists.
+iptables: Chain already exists.
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+iptables: No chain/target/match by that name.
+evtNotifyHandleFunInit ...
+CfgmgrevtNotifyHandleFunInit ...
+isOnuTimeEnable ...
+insmod: can't read '/lib/modules/3.18.21/nf_nat.ko': No such file or directory
+insmod: can't read '/lib/modules/3.18.21/nfnetlink_queue.ko': No such file or directory
+5g wifi MAC address = 00:26:86:00:00:00
+libONU_GetGPONTimeEnable:<1>
+bridge ip: 192.168.1.51/netmask=ffffff00, hw_addr: ec:b3:13:ee:cb:50
+Reading ARP table
+cfg_bootWanLanAccess enter >>>>>>.Function cfg_bootMWband() is called
+configMcastFlow ...
+2750 @ cfg_bootFunc
+fid 35 not found
+2750 @ cfg_bootFunc
+fid 36 not found
+method = HW_NAT_TAB_CLEAN
+done
+method = HW_NAT_TAB_CLEAN
+start stunnel for customer
+done
+method = HW_NAT_TAB_CLEAN
+done
+method = HW_NAT_TAB_CLEAN
+done
+method = HW_NAT_TAB_CLEAN
+done
+method = HW_NAT_TAB_CLEAN
+done
+killall: utelnetd: no process killed
+iptables: No chain/target/match by that name.
+ip6tables: No chain/target/match by that name.
+iptables: No chain/target/match by that name.
+ip6tables: No chain/target/match by that name.
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+telnetd: starting
+  max_connection=8 port: 23; interface: any; login program: /bin/login
+killall: proftpd: no process killed
+lib_get_voipType voiceProfile.X_CT_COM_ServerType 1
+mtk_swdl_get_image_version : image[0] version=3FE46606BFGB87
+>>>>getSwVerInfo(),imageBank:0,version:3FE46606BFGB87
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+special_process_depended_board: call swdl_commit.
+mtk_swdl_commit : commit before: active=0, commit=0, next_active=0 boot_fail_num=1
+mtk_swdl_commit : commit after: active=0, commit=0, next_active=0, boot_fail_num=0
+mtk_swdl_get_image_status : get image[1] status isActive=0 isCommitted=0 isValid=255
+OMCI_LIB: OmciMain:: got 'ONU_SWIMAGE_INFO' with value 0x1
+mtk_swdl_get_image_version : image[1] version=3FE46606BFGB87
+>>>>getSwVerInfo(),imageBank:1,version:3FE46606BFGB87
+>>>>getSwVerInfo,swid=2,get image failed. reason=1
+632 @ stl_TimeServerCfgObject
+cp: can't stat '/usr/share/zoneinfo/GMT+07:0': No such file or directory
+OMCI_LIB: OmciMain:: got 'ONU_SWIMAGE_INFO' with value 0x0
+open /tmp/ntpstatus failed2750 @ cfg_bootFunc
+fid 37 not found
+>>>>getSwVerInfo,swid=3,get image failed. reason=1
+>>>>getSwVerInfo,swid=4,get image failed. reason=1
+Function stl_CtBhBaiscInfObject() is called
+Function stl_NetDiagObject() is called
+Function stl_CtBhAnalysisObject() is called
+523 @ rutUserbh_enableCtbhAnalysis
+dpi enable, but no internet wan bridgeunsupported msg type 268445442(10002702)
+unsupported msg type 268445442(10002702)
+unsupported msg type 268445442(10002702)
+[INIT] start init static route
+OMCI_LIB: OmciMain:: got 'ONU_SWIMAGE_INFO' with value 0x0
+>>>>getSwVerInfo,swid=5,get image failed. reason=1
+[INIT] exit init static route
+MiniOLTTest.Enable is 0
+Function rts_MinioltTestObject() is called
+cfg_bootVPN() -
+vpn.enable = 0
+prepare
+mkdir: can't create directory '/var/run/xl2tpd': File exists
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+start
+cfg_bootRfVideo() -
+2750 @ cfg_bootFunc
+fid 52 not found
+2750 @ cfg_bootFunc
+fid 56 not found
+ipsec_setup: Starting Openswan IPsec U2.6.38/K3.18.21...
+
+killall: udpEchod: no process killed
+security init: cfg_bootSecurity enter...
+4256 @ cfg_updateFileStat
+ stat /etc/gshadow failed: No such file or directory
+4256 @ cfg_updateFileStat
+ stat /etc/gshadow- failed: No such file or directory
+Function stl_ParentalControlObject() is called
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+timer error eventReactorFunc 4 : Interrupted system call
+br0: port 3(ra0.v0) entered forwarding state
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+stop
+whack: Pluto is not running (no "/var/run/pluto/pluto.ctl")
+ipsec_setup: Stopping Openswan IPsec...
+
+netlink: 24 bytes leftover after parsing attributes in process `ip'.
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!
+>>>: select error!init queue failed: queueId=0x141
+
+>>>: select error!
+>>>: select error!init queue failed: queueId=0x142
+
+>>>: select error!init queue failed: queueId=0x143
+
+>>>: select error!
+>>>: select error!
+>>>: select error!init queue failed: queueId=0x144
+
+>>>: select error!
+>>>: select error!init queue failed: queueId=0x145
+
+>>>: select error!
+>>>: select error!init queue failed: queueId=0x146
+
+>>>: select error!
+>>>: select error!init queue failed: queueId=0x147
+ds_sec=-1
+ Inside GatewayUniSupp_1Itf::GatewayUniSupp_1Itf constructor
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+PWRSHED_ATTR_SET message received!
+PwrShed Timers are eth<0> pots<0> ces<0> video<0> xdsl<0> restore<0>, and batteryStatus is <0>
+getLoidAuthInfo() exit @ 1m:24s:495ms, :
+ - create_instance_auto()  act_plugInUnitType = 48
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ - create_instance_auto()  act_plugInUnitType = 24
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+configUniAction(portId=e01,tag=2) stream_ptr is NULL
+configUniAction(portId=e01,tag=2) stream_ptr is NULL
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+ create auto instanmce gateway uni ME succesful
+sal_configRateLimit(portocol=DHCP,value=10
+sal_configRateLimit(portocol=ARP,value=10
+OMCI_LIB:ALL PQs (US+DS) created
+getLoidAuthInfo() exit @ 1m:24s:565ms, :
+AnigSupp_1 creat
+mtk_swdl_get_image_status : get image[0] status isActive=1 isCommitted=1 isValid=255
+special_process_depended_board: call swdl_commit.
+mtk_swdl_commit : commit before: active=0, commit=0, next_active=0 boot_fail_num=1
+mtk_swdl_commit : commit after: active=0, commit=0, next_active=0, boot_fail_num=0
+mtk_swdl_get_image_status : get image[1] status isActive=0 isCommitted=0 isValid=255
+OMCI_LIB: Got swImageInfo = 1, standby = 1
+OMCI_LIB: Got swImageInfo = 0, standby = 3
+OMCI_LIB: Got swImageInfo = 0, standby = xmcs_set_connection_start: mode=1
+xmcs_set_connection_start:892 XPON_PHY_SET ret=0 phy working mode: 1
+5
+get slid pwd: 44454641554c54000000
+xmcs_set_connection_start:959 XPON_PHY_TX_ENABLE ret=0
+set channel drop
+txchn     ffff, rxchn        0, hw        0 value 0
+hal_mtk_activate_gponlink:30 ret=0
+>>>>>checkLanState(port:1,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:2,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:3,original _connect:-1,isConnect:0)
+>>>>>checkLanState(port:4,original _connect:-1,isConnect:1)
+
+AONT login:
+AONT login: netlink: 24 bytes leftover after parsing attributes in process `ip'.
+ipsec_setup: no default routes detected
+
+Jan  1 07:01:37 pluto[3539]: Starting Pluto (Openswan Version 2.6.38; Vendor ID OEvy\134kgzWq\134s) pid:3539
