@@ -2,7 +2,11 @@
 MTD Dump of Nokia G-240W-F GPON ONT
 
 >[!NOTE]
->You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump.py)
+>You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump-Tool.py)
+>
+>UART Dump tool's pros: almost no modification required to the motherboard.
+>
+>UART Dump tool's cons: requires 3-rd party python plugin `pyserial` (painful to setup if you are not familiar with terminal), dumping process takes too much time (can take up to 10 hours), less reliable than programmers like CH341A.
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
 # Partition Table
