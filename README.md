@@ -47,8 +47,8 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 # Enable shell - Instructiom
  - Find device's SPI NAND
  - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND for a brief moment when `BMT & BBT Init Success` shows up
- - Wait for boot command promt to timeout (*Please, do not press any keys at this point*)
- - The terminal will show something like `Linux version 3.18.21 (buildmgr@AONT15) (gcc version 4.9.3 (Buildroot 2015.08.1) ) #4 SMP Fri Aug 11 17:25:43 CST 2017`, you're in . Retry in case it did not show up. 
+ - Wait for boot command prompt to timeout (*Please, do not press any keys at this point or it will enter u-boot*)
+ - If you see `OperatorID` is blank, you're in, you should be able to see device's operation logs. Retry in case `OperatorID` shows your ISP's or your region .
 # Device's U-boot Available Commands
     ?                                   Print out help messages.
     help                                Print out help messages.
