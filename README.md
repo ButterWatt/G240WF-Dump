@@ -13,16 +13,22 @@ This repository is licensed under GNU General Public License version 3 (GNU GPLv
 *Not Available*
 # NAND Table
     START ADDRESS    |     END ADDRESS   |    PARTITION NAME
-      0x00000000           0x00040000         bootloader
-      0x00040000           0x00080000         romfile
-      0x00080000           0x002a85f4         kernel
-      0x002a85f4           0x011b85f4         rootfs
-      0x00080000           0x01080000         tclinux
-      0x01080000           0x1af46dfa         kernel_slave
-      0x1af46dfa           0xd0746dfa         rootfs_slave
-      0x01080000           0x02080000         tclinux_slave
-      0x05480000           0x054a0000         yaffs
-      0x06e40000           0x07000000         reservearea
+    0x000000000000       0x000000040000        bootloader
+    0x000000040000       0x000000080000        romfile
+    0x000000080000       0x000000380000        kernel
+    0x000000380000       0x000002280000        rootfs
+    0x000002280000       0x000002580000        kernel_slave
+    0x000002580000       0x000004480000        rootfs_slave
+    0x000004480000       0x000004780000        kernel_oflt
+    0x000004780000       0x000005380000        rootfs_oflt
+    0x000005380000       0x000005b80000        config
+    0x000005b80000       0x000006780000        log
+    0x000006780000       0x000006d80000        extfs
+    0x000006d80000       0x000006dc0000        bosa
+    0x000006dc0000       0x000006e00000        flag
+    0x000006e00000       0x000006e40000        flagback
+    0x000006e40000       0x000006e80000        ri
+    0x000006e80000       0x000006ec0000        riback
 # Device Information
 Model: `G-240W-F`
 
