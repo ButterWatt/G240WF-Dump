@@ -6,7 +6,7 @@ MTD Dump of Nokia G-240W-F GPON ONT
 >
 >UART Dump tool's pros: almost no modification required to the motherboard.
 >
->UART Dump tool's cons: requires 3-rd party python plugin `pyserial` (painful to setup if you are not familiar with terminal), dumping process takes too much time (can take up to 10 hours), less reliable than programmers like CH341A.
+>UART Dump tool's cons: requires 3rd-party python plugin `pyserial` (painful to setup if you are not familiar with terminal), dumping process takes too much time (can take up to 10 hours), less reliable than programmers like CH341A.
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
 # Partition Table
@@ -36,6 +36,8 @@ SoC: `EcoNet EN7526GT` (Note: *evolution of EN751221 family, same toolchain*)
 
 Landline: `Microchip LE9652PQC`
 
+Default telnet/UART credemtials: `N/A`
+
 (*Nevermind why NAND Table so weird, that's classic Symbian mind applied to GPON ONT systems*)
 # UART log
 You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-log) and UART shell log [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-shell-log)
@@ -48,7 +50,7 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
  - Find device's SPI NAND
  - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND for a brief moment when `BMT & BBT Init Success` shows up
  - Wait for boot command prompt to timeout (*Please, do not press any keys at this point or it will enter u-boot*)
- - If you see `OperatorID` is blank, you're in, you should be able to see device's operation logs. Retry in case `OperatorID` shows your ISP's or your region .
+ - If you see `OperatorID` is blank, you're in, you should be able to see device's operation logs. Retry in case `OperatorID` shows your ISP's or your region.
 # Device's U-boot Available Commands
     ?                                   Print out help messages.
     help                                Print out help messages.
@@ -84,3 +86,6 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 >`nandrd` buffer is 0x1000 = 4096 bytes, going above will crash U-boot
 >
 >`xmdm` *only* receive file, not send.
+>
+>Do not touch any critical commands like `cpufreq`, `nandit` or `flash` if you are **NOT CERTAIN** what you're about to do.
+> (*Make sure you have a programmer to reflash if something goes wrong while using critical commands*)
