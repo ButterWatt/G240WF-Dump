@@ -42,7 +42,7 @@ SoC: `EcoNet EN7526GT` (Note: *evolution of EN751221 family, same toolchain*)
 
 Landline: `Microchip LE9652PQC`
 
-Default telnet/UART credemtials: `N/A`
+Default telnet/UART credemtials: `ONTUSER:SUGAR2A041`
 
 (*Nevermind why NAND Table so weird, that's classic Symbian mind applied to GPON ONT systems*)
 # UART log
