@@ -97,9 +97,9 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 # Device's U-boot Available Commands
     ?                                   Print out help messages.
     help                                Print out help messages.
-    ritool                              ritool.
-    reset                               board reset
-    serial disable                      serial disable
+    ritool                              Print or edit device parameters (get/set/dump)
+    reset                               Peform CPU reset
+    serial disable                      Disable serial
     go                                  Booting the linux kernel.
     memrl <addr>                        Read a word from addr.<addr, hex remove 0x>
     memwl <addr> <value>                Write a word to addr.<addr, hex remove 0x>
@@ -132,3 +132,6 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 >
 >Do not touch any critical commands like `cpufreq`, `nandit` or `flash` if you are **NOT CERTAIN** what you're about to do.
 > (*Make sure you have a programmer to reflash if something goes wrong while using critical commands*)
+
+>[!WARNING]
+>`ritool` is the most critical command, I'd like to warn you that PRINT IT AND BACK IT UP before writing anything, avoid irreversable damages
