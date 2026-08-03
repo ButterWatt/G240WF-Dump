@@ -10,7 +10,44 @@ MTD Dump of Nokia G-240W-F GPON ONT
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
 # Partition Table
-*Not Available*
+    PARTITION |   SIZE   | ERASESIZE | DEFINITION     |                                            PARTITION INFO
+
+      mtd0      00040000   00020000    bootloader       LZMA, P: 0x5D, D: 8388608, U: 185792, H: 0x10000
+
+      mtd1      00040000   00020000    romfile          N/A
+  
+      mtd2      00300000   00020000    kernel           LZMA, P: 0x5D, D: 8388608, U: 6624768, H: 0x100
+      
+      mtd3      001f0000   00020000    rootfs           Squashfs LZMA, LE, version 4.0, S: 15788044, I: 1798, B: 131072, T: 2017-08-11 09:32:58
+
+      mtd4      00300000   00020000    kernel_slave     LZMA, P: 0x5D, D: 8388608, U: 6624768, H: 0x100
+
+      mtd5      001f0000   00020000    rootfs_slave     Squashfs LZMA, LE, version 4.0, S: 15788044, I: 1798, B: 131072, T: 2017-08-11 09:32:58
+      
+      mtd6      00300000   00020000    kernel_oflt      LZMA, P: 0x5D, D: 8388608, U: 6624768, H: 0x100
+    
+      mtd7      00c00000   00020000    rootfs_oflt      Squashfs LZMA, LE, version 4.0, S: 7344015, I: 851, B: 131072, T: 2017-08-11 09:19:01
+      
+      mtd8      00800000   00020000    config           UBI erase count header, version: 1, EC: 0x46D, VID header offset: 0x800, data offset: 0x1000
+    
+      mtd9      00c00000   00020000    log              UBI erase count header, version: 1, EC: 0x1, VID header offset: 0x800, data offset: 0x1000, H: 0x0 /
+                                                        UBIFS filesystem master node, Highest I: 27523, commit number: 148241 to 148274, start H: 0x21000
+                                                        
+      mtd10     00600000   00020000    extfs            N/A
+    
+      mtd11     00040000   00020000    bosa             N/A
+    
+      mtd12     00040000   00020000    flag             N/A
+    
+      mtd13     00040000   00020000    flagback         N/A
+
+      mtd14     00040000   00020000    ri               N/A
+
+      mtd15     00040000   00020000    riback           N/A
+    
+    P: PROPERTIES | D: DICTIONARY SIZE (byte) | U: UNCOMPRESSED (byte) | S: SIZE (byte) | B: BLOCKSIZE (byte) | I: INODE
+    
+    H: HEXDECIMAL | A: IMAGE ID | T: TIMESTAMP | C: CHECKSUM | LE: LITTLE ENDIAN | BE: BIG ENDIAN
 # NAND Table
     START ADDRESS    |     END ADDRESS   |    PARTITION NAME
     0x000000000000       0x000000040000        bootloader
