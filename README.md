@@ -4,11 +4,11 @@ MTD Dump of Nokia G-240W-F GPON ONT
 >[!NOTE]
 >You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump-Tool.py)
 >
->UART Dump tool's pros: almost no modification required to the motherboard.
->
 >UART Dump tool's cons: requires 3rd-party python plugin `pyserial` (painful to setup if you are not familiar with terminal), dumping process takes too much time (can take up to 10 hours), less reliable than programmers like CH341A.
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
+>[!Warning]
+>This repository is created for EDUCATION PURPOSES only, using this repo for "unethical activities" is considered as *war crime* (that's on you). *Read twice* before you do *anything stupid enough to summon hell beneath your basement*
 # Partition Table
     PARTITION |   SIZE   | ERASESIZE | DEFINITION     |                                            PARTITION INFO
 
@@ -79,7 +79,7 @@ SoC: `EcoNet EN7526GT` (Note: *evolution of EN751221 family, same toolchain*)
 
 Landline: `Microchip LE9652PQC`
 
-Default telnet/UART credemtials: `ONTUSER:SUGAR2A041`
+Default telnet/UART credentials: `ONTUSER:SUGAR2A041`
 
 (*Nevermind why NAND Table so weird, that's classic Symbian mind applied to GPON ONT systems*)
 # UART log
@@ -89,7 +89,7 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
  - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND when `BMT & BBT Init Success` shows up
  - Press a key if terminal shows `Press any key in 3 secs to enter boot command mode.`
  - If the terminal shows `bldr> `, you're in. Restart the process in case something else appears.
-# Enable shell - Instructiom
+# Enable shell - Instruction
  - Find device's SPI NAND
  - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND for a brief moment when `BMT & BBT Init Success` shows up
  - Wait for boot command prompt to timeout (*Please, do not press any keys at this point or it will enter u-boot*)
@@ -98,7 +98,7 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
     ?                                   Print out help messages.
     help                                Print out help messages.
     ritool                              Print or edit device parameters (get/set/dump)
-    reset                               Peform CPU reset
+    reset                               Perform CPU reset
     serial disable                      Disable serial
     go                                  Booting the linux kernel.
     memrl <addr>                        Read a word from addr.<addr, hex remove 0x>
@@ -133,5 +133,5 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 >Do not touch any critical commands like `cpufreq`, `nandit` or `flash` if you are **NOT CERTAIN** what you're about to do.
 > (*Make sure you have a programmer to reflash if something goes wrong while using critical commands*)
 
->[!WARNING]
->`ritool` is the most critical command, I'd like to warn you that PRINT IT AND BACK IT UP before writing anything, avoid irreversable damages
+>[!CAUTION]
+>`ritool` is the **MOST CRITICAL** command, I'd like to warn you that **PRINT IT AND BACK IT UP** before writing anything, avoid irreversable damages
