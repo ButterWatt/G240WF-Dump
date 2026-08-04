@@ -8,7 +8,7 @@ MTD Dump of Nokia G-240W-F GPON ONT
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
 >[!Warning]
->This repository is created for EDUCATION PURPOSES only, using this repo for "unethical activities" is considered as *war crime* (that's on you). *Read twice* before you do *anything stupid enough to summon hell beneath your basement*
+>This repository is created for EDUCATION PURPOSES only, using this repo for "unethical activities" is considered as *war crime* (that's on you). *Read twice before you do anything stupid enough to summon hell beneath your basement*
 # Partition Table
     PARTITION |   SIZE   | ERASESIZE | DEFINITION     |                                            PARTITION INFO
 
