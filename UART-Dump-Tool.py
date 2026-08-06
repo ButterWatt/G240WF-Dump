@@ -1,20 +1,34 @@
-import serial
+# !/usr/bin/env python3
+
+# SCRIPT DUMP QUA UART BỞI BUTTERWATT (https://github.com/ButterWatt/G240WF-Dump/)
+# PHÁT HÀNH DƯỚI GIẤY PHÉP CÔNG CỘNG GNU PHIÊN BẢN 3 (GNU GPLv3)
+# CẤM SỬ DỤNG VÀO MỤC ĐÍCH XẤU
+
+# UART DUMP SCRIPT BY BUTTERWATT
+# RELEASE UNDER GNU GENERAL PUBLIC LICENSE VERSION 3 (GNU GPLv3)
+# USING IN BAD PURPOSES IS FORBIDDEN
+
 import time
 import re
-
-# === SERIAL PORT CONFIG ===
-PORT = 'COM3'         # Replace your COM port (eg: /dev/ttyUSB0)
+try: 
+    import serial
+except ModuleNotFoundError as e:
+    print("[!] PySerial is not installed or this Instance is in restricted mode.")
+    exit()
+# === SERIAL PORT CONFIG | CÀI ĐẶT CỔNG SERIAL ===
+PORT = 'COM3'         # Replace your COM port (eg: /dev/ttyUSB0) | Thay cổng COM tương ứng
 BAUD = 115200
-OUTPUT_FILE = 'mtd2.bin'
-PROMPT = "bldr>"     # U-Boot Standard Promp
+OUTPUT_FILE = 'full_dump.bin'
+PROMPT = "bldr>"     # U-Boot Standard Promp, Replace If Needed | Promp U-boot tiêu chuẩn, thay thế nếu cần
 
-# === DUMP ADDR (0x PREFIX IS NOT REQUIRED) ===
-# Example   Dump 1MB       : START = "0", END = "100000"
-#           Dump All 128MB : START = "0", END = "8000000"
-START_ADDR_HEX = "80000"
-END_ADDR_HEX   = "2a85f4"
 
-BLOCK_SIZE = 0x1000        # 4096 bytes (1k hex)
+# === DUMP ADDR (0x PREFIX IS NOT REQUIRED) | ĐỊA CHỈ DUMP (KHÔNG CẦN TIỀN TỐ 0x) ===
+# Example/Ví dụ          Dump 1MB       : START = "0", END = "100000"
+#                        Dump 128MB     : START = "0", END = "8000000"
+START_ADDR_HEX = "0"
+END_ADDR_HEX   = "8000000"
+
+BLOCK_SIZE = 0x1000        # 4096 bytes (1k hex), going above threshold will crash U-boot | vượt quá ngưỡng sẽ gây sập U-boot
 
 def hex_str_to_int(hex_str):
     clean_hex = hex_str.strip().lower().replace("0x", "")
@@ -22,7 +36,7 @@ def hex_str_to_int(hex_str):
 
 def send_and_receive(ser, cmd):
     ser.reset_input_buffer()
-    # ONLY SEND \r (Carriage Return)
+    # ONLY SEND \r (Carriage Return) | CHỈ GỬI \r
     ser.write((cmd + '\r').encode('utf-8'))
     
     output = ""
@@ -35,7 +49,7 @@ def send_and_receive(ser, cmd):
             if PROMPT in output:
                 break
         
-        if time.time() - start_time > 4: # TIMEOUT 4S
+        if time.time() - start_time > 3: # TIMEOUT
             break
             
         time.sleep(0.01)
@@ -48,7 +62,7 @@ def read_block_with_retry(ser, offset_str, max_retries=3):
     for attempt in range(1, max_retries + 1):
         raw_response = send_and_receive(ser, cmd)
         
-        # SPLIT HEX DATA
+        # SPLIT HEX DATA | TÁCH DỮ LIỆU THẬP LỤC PHÂN
         lines = raw_response.splitlines()
         payload_lines = [l for l in lines if not l.startswith("nandrd") and PROMPT not in l]
         clean_text = " ".join(payload_lines)
@@ -65,6 +79,8 @@ def read_block_with_retry(ser, offset_str, max_retries=3):
     return b''
 
 def main():
+    STIME = time.asctime()
+    estop = 0
     start_addr = hex_str_to_int(START_ADDR_HEX)
     end_addr = hex_str_to_int(END_ADDR_HEX)
     
@@ -72,20 +88,25 @@ def main():
         print("[!] ERROR: START ADDR MUST SMALLER THAN END ADDR!")
         return
 
-    # CALCULATE BLOCK
+    # CALCULATE BLOCK | TÍNH TOÁN KHỐI
     total_bytes = end_addr - start_addr
     total_blocks = (total_bytes + BLOCK_SIZE - 1) // BLOCK_SIZE
 
-    print(f"[*] CONNECTING TO {PORT} ({BAUD})...")
+    print(f"[*] CONNECTING TO : {PORT} AT {BAUD}", end='')
+    time.sleep(1)
     ser = serial.Serial(PORT, BAUD, timeout=1)
-    
+    print(f"\r[*] CONNECTED TO  : {PORT} AT {BAUD}")
     print("=" * 60)
     print(f"[*] DUMP ADDRESSES  : 0x{start_addr:X} -> 0x{end_addr:X}")
     print(f"[*] TOTAL CAP.      : {total_bytes} bytes (~{total_bytes/1024/1024:.2f} MB)")
     print(f"[*] TOTAL BLOCK     : {total_blocks} (0x1000 bytes each)")
+    print(f"[*] START TIME      : {STIME}")
+    print(f"[*] ESTIMATED TIME  : {total_blocks*1.5:.1f} s | {total_blocks*(1.5/60):.1f} m | {total_blocks*(1.5/60/60):.1f} h")
+    print(f"[!] Keep both PC and GPON powered until the process completes.")
+    print(f"[!] Unplugging UART cable mid-dump is a great way to corrupt your dump.")
     print("=" * 60)
     
-    # WARM-UP
+    # WARM-UP BEFORE DUMP | LÀM NÓNG TRƯỚC KHI TIẾN HÀNH DUMP
     ser.write(b'\r')
     time.sleep(0.3)
     send_and_receive(ser, "nandrd 0 1000")
@@ -97,20 +118,25 @@ def main():
             
             binary_data = read_block_with_retry(ser, offset_str)
             
-            if len(binary_data) == 0:
-                print(f"\n[!] SKIPPED BLOCK AT OFFSET {offset_str}")
-            
+            if len(binary_data) < 4096:
+                print(f"\r[!] EXPECTED 4096B, RECEIVED {len(binary_data)}B AT OFFSET 0x{offset_str}. STOP." + " "*5)
+                estop = 1
+                break
             f_out.write(binary_data)
             
-            # PRINT PROGRESS
+            # PRINT PROGRESS | IN TIẾN TRÌNH
             progress = ((i + 1) / total_blocks) * 100
-            print(f"\r[*] Progress: {progress:.2f}% | Block: {i+1}/{total_blocks} | Current Offset: 0x{offset_str} | Recv: {len(binary_data)}B", end='')
-
-    print(f"\n\n[+] COMPLETED! SAVED TO {OUTPUT_FILE}")
+            print(f"\r[*] P: {progress:.2f}% | B: {i+1}/{total_blocks} | O: 0x{offset_str} | R: {len(binary_data)}B" + " "*5, end='')
+    if estop != 1:
+        print(f"\n\n[+] COMPLETED! SAVED TO {OUTPUT_FILE} | ENDED AT {time.asctime()}")
     ser.close()
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt as e:
-        print(f"\n[!] Keyboard Interupted, Abort")
+        print(f"\r[!] Keyboard Interupted, Abort" + " "*20)
+    except serial.SerialException as e:
+        print(f"\r[!] Serial device error, abort ({e})")
+    except TypeError as e:
+        print(f"[!] Unexpected error occurred ({e})")
