@@ -135,8 +135,10 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt as e:
-        print(f"\r[!] Keyboard Interupted, Abort" + " "*20)
+        print(f"\r[!] Keyboard Interupted. Abort." + " "*15)
     except serial.SerialException as e:
-        print(f"\r[!] Serial device error, abort ({e})")
+        print(f"\r[!] Serial Device Error. Abort. ({e})")
     except TypeError as e:
-        print(f"[!] Unexpected error occurred ({e})")
+        print(f"\r[!] Unexpected Error Occurred. Abort. ({e})")
+    except OSError as e:
+        print(f"\r[!] UART Cable Unplugged. Abort. ({e})")
