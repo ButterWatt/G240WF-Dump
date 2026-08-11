@@ -135,3 +135,8 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 
 >[!CAUTION]
 >`ritool` is the **MOST CRITICAL** command, I'd like to warn you that **PRINT IT AND BACK IT UP** before writing anything, avoid irreversable damages
+
+# SHA-512 Checksum
+G240WF-Dump-Untested.bin `ae43281e2a15c9fe1bdba1e18d9bdce7e13ee3bc013ace752a3032193a51834f5779a1bda3ca47d74c8f7a4b7a0998002519d5e4068053076096516b0c7a85a3`
+
+G240WF-MTD-Dump.zip `fcb31746ba48c88b4dec419b0d5336eb78c20c4fce80c1ac1a7a4b06cc016d1ea8f467fab907b4719ae4d8b19bfae708a79004fe768e73e8f17cb66fd258beca`
