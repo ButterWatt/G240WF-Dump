@@ -4,7 +4,7 @@ MTD Dump of Nokia G-240W-F GPON ONT
 >[!NOTE]
 >You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump-Tool.py)
 >
->UART Dump tool's cons: requires 3rd-party python plugin `pyserial` (painful to setup if you are not familiar with terminal), dumping process takes too much time (can take up to 10 hours), less reliable than programmers like CH341A.
+>The tool requires `pyserial` and takes up to 14 hours for full dump file in ideal conditions including no hardware/software interupt, both device must be powered, connected via UART and `governor` must set to *performance* for ARMv7l/hf devices (x86 or AArch64 can set to *interactive* or *ondemand* to lower power consumtion)
 # License
 This repository is licensed under GNU General Public License version 3 (GNU GPLv3), take a look at [GNU Website](https://www.gnu.org/licenses/gpl-3.0.html) or this [repo's license](https://github.com/ButterWatt/G240WF-Dump/blob/main/LICENSE). *Meh, you didn't read the license*
 >[!Warning]
@@ -67,11 +67,11 @@ This repository is licensed under GNU General Public License version 3 (GNU GPLv
     0x000006e40000       0x000006e80000        ri
     0x000006e80000       0x000006ec0000        riback
 # Device Information
-Model: `G-240W-F`
+Device Model: `G-240W-F`
 
-Storage: `Macronix MXIC MX35LF1GE4AB-Z4I SPI NAND 128MB 1Gbit`
+Storage chip: `Macronix MXIC MX35LF1GE4AB-Z4I SPI NAND 128MB 1Gbit`
 
-Memory: `Winbond W632GG6MB-12 256MB 128M*16-bit DDR3 2Gbit`
+Memory chip: `Winbond W632GG6MB-12 256MB 128M*16-bit DDR3 2Gbit`
 
 WiFi: `Mediatek MT7592N`
 
@@ -82,18 +82,14 @@ Landline: `Microchip LE9652PQC`
 Default telnet/UART credentials: `ONTUSER:SUGAR2A041`
 
 (*Nevermind why NAND Table so weird, that's classic Symbian mind applied to GPON ONT systems*)
-# UART log
+# UART Log
 You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-log) and UART shell log [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-shell-log)
-# Dive In U-boot - Instruction
+# Enter bootloader - Instruction
  - Find device's SPI NAND
- - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND when `BMT & BBT Init Success` shows up
+ - Power the device, short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND when `BMT & BBT Init Success` shows up
  - Press a key if terminal shows `Press any key in 3 secs to enter boot command mode.`
- - If the terminal shows `bldr> `, you're in. Restart the process in case something else appears.
-# Enable shell - Instruction
- - Find device's SPI NAND
- - Short Pin 4 (GND) to Pin 6 (SCLK) of the SPI NAND for a brief moment when `BMT & BBT Init Success` shows up
- - Wait for boot command prompt to timeout (*Please, do not press any keys at this point or it will enter u-boot*)
- - If you see `OperatorID` is blank, you're in, you should be able to see device's operation logs. Retry in case `OperatorID` shows your ISP's or your region.
+ - If the terminal shows `bldr> `, you're in. Return to step 2 if something goes wrong.
+ - (Optional) backup `ritool`, set `OperatorID` to ALCL and factory reset to remove ISP restrictions if present. Default web management creds will be `AdminGPON:ALC#FGU`
 # Device's U-boot Available Commands
     ?                                   Print out help messages.
     help                                Print out help messages.
@@ -134,7 +130,7 @@ You can find device's bootlog [here](https://github.com/ButterWatt/G240WF-Dump/b
 > (*Make sure you have a programmer to reflash if something goes wrong while using critical commands*)
 
 >[!CAUTION]
->`ritool` is the **MOST CRITICAL** command, I'd like to warn you that **PRINT IT AND BACK IT UP** before writing anything, avoid irreversable damages
+>`ritool` is the **MOST CRITICAL** command, I'd like to warn you that **PRINT AND BACK IT UP** before writing anything, avoid irreversable damages
 
 # SHA-512 Checksum
 G240WF-Dump-Untested.bin `ae43281e2a15c9fe1bdba1e18d9bdce7e13ee3bc013ace752a3032193a51834f5779a1bda3ca47d74c8f7a4b7a0998002519d5e4068053076096516b0c7a85a3`
