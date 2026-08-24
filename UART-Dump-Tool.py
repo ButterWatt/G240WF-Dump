@@ -10,6 +10,8 @@
 
 import time
 import re
+import os
+import platform
 try: 
     import serial
 except ModuleNotFoundError as e:
@@ -29,6 +31,24 @@ START_ADDR_HEX = "0"
 END_ADDR_HEX   = "8000000"
 
 BLOCK_SIZE = 0x1000        # 4096 bytes (1k hex), going above threshold will crash U-boot | vượt quá ngưỡng sẽ gây sập U-boot
+
+def governor_intercept():
+    if platform.system() != "Linux":
+        return
+    host = platform.machine().lower()
+    if host not in ("armv7l", "armhf"):
+        return
+    governor_path = "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
+    try:
+        with open(governor_path) as path:
+            governor = path.read().strip()
+    except OSError:
+        return
+    if governor != "performance":
+        print(f"\r[!] CPU Governor is set to {governor}. On {host}, it is a bottleneck and causes timing issue.")
+        print("""[!] Please change your device governor to "performane" in order to continue.""")
+        exit(0)
+    print(f"\n[*] No issue detected with governor. Continue (Device's governor: {governor})")
 
 def hex_str_to_int(hex_str):
     clean_hex = hex_str.strip().lower().replace("0x", "")
@@ -133,6 +153,7 @@ def main():
 
 if __name__ == "__main__":
     try:
+        governor_intercept()
         main()
     except KeyboardInterrupt as e:
         print(f"\r[!] Keyboard Interupted. Abort." + " "*15)
