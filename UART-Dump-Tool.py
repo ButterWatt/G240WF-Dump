@@ -1,28 +1,17 @@
 # !/usr/bin/env python3
 
-# SCRIPT DUMP QUA UART BỞI BUTTERWATT (https://github.com/ButterWatt/G240WF-Dump/)
-# PHÁT HÀNH DƯỚI GIẤY PHÉP CÔNG CỘNG GNU PHIÊN BẢN 3 (GNU GPLv3)
-# CẤM SỬ DỤNG VÀO MỤC ĐÍCH XẤU
+# UART DUMP TOOL BY BUTTERWATT
+# RELEASE UNDER GNU GENERAL PUBLIC LICENSE VERSION 3
 
-# UART DUMP SCRIPT BY BUTTERWATT
-# RELEASE UNDER GNU GENERAL PUBLIC LICENSE VERSION 3 (GNU GPLv3)
-# USING IN BAD PURPOSES IS FORBIDDEN
-
-import time
-import re
-import os
-import platform
+import time, re, os, platform
 try: 
     import serial
 except ModuleNotFoundError as e:
     print("[!] PySerial is not installed or this Instance is in restricted mode.")
     exit()
-# === SERIAL PORT CONFIG | CÀI ĐẶT CỔNG SERIAL ===
+# === GENERAL CONFIGURATION ===
 PORT = 'COM3'         # Replace your COM port (eg: /dev/ttyUSB0) | Thay cổng COM tương ứng
-BAUD = 115200
-OUTPUT_FILE = 'full_dump.bin'
-PROMPT = "bldr>"     # U-Boot Standard Promp, Replace If Needed | Promp U-boot tiêu chuẩn, thay thế nếu cần
-
+OUTPUT_FILE = 'dump.bin'
 
 # === DUMP ADDR (0x PREFIX IS NOT REQUIRED) | ĐỊA CHỈ DUMP (KHÔNG CẦN TIỀN TỐ 0x) ===
 # Example/Ví dụ          Dump 1MB       : START = "0", END = "100000"
@@ -30,6 +19,9 @@ PROMPT = "bldr>"     # U-Boot Standard Promp, Replace If Needed | Promp U-boot t
 START_ADDR_HEX = "0"
 END_ADDR_HEX   = "8000000"
 
+# === U-BOOT CONFIGURATION ===
+BAUD = 115200
+PROMPT = "bldr>"           # U-Boot Standard Promp, Replace If Needed | Promp U-boot tiêu chuẩn, thay thế nếu cần
 BLOCK_SIZE = 0x1000        # 4096 bytes (1k hex), going above threshold will crash U-boot | vượt quá ngưỡng sẽ gây sập U-boot
 
 def governor_intercept():
@@ -96,7 +88,7 @@ def read_block_with_retry(ser, offset_str, max_retries=3):
         time.sleep(0.1)
         ser.reset_input_buffer()
         
-    return b''
+    raise RuntimeError(f"Offset 0x{offset_str} Did not return any data after {max_retries} attempts")
 
 def main():
     STIME = time.asctime()
@@ -130,26 +122,20 @@ def main():
     ser.write(b'\r')
     time.sleep(0.3)
     send_and_receive(ser, "nandrd 0 1000")
-    
-    with open(OUTPUT_FILE, 'wb') as f_out:
-        for i in range(total_blocks):
-            current_offset = start_addr + (i * BLOCK_SIZE)
-            offset_str = f"{current_offset:X}"
+    try:
+        with open(OUTPUT_FILE, 'wb') as f_out:
+            for i in range(total_blocks):
+                current_offset = start_addr + (i * BLOCK_SIZE)
+                offset_str = f"{current_offset:X}"
+                binary_data = read_block_with_retry(ser, offset_str)
+                f_out.write(binary_data)
             
-            binary_data = read_block_with_retry(ser, offset_str)
-            
-            if len(binary_data) < 4096:
-                print(f"\r[!] EXPECTED 4096B, RECEIVED {len(binary_data)}B AT OFFSET 0x{offset_str}. STOP." + " "*5)
-                estop = 1
-                break
-            f_out.write(binary_data)
-            
-            # PRINT PROGRESS | IN TIẾN TRÌNH
-            progress = ((i + 1) / total_blocks) * 100
-            print(f"\r[*] P: {progress:.2f}% | B: {i+1}/{total_blocks} | O: 0x{offset_str} | R: {len(binary_data)}B" + " "*5, end='')
-    if estop != 1:
+                # PRINT PROGRESS | IN TIẾN TRÌNH
+                progress = ((i + 1) / total_blocks) * 100
+                print(f"\r[*] P: {progress:.2f}% | B: {i+1}/{total_blocks} | O: 0x{offset_str}" + " "*5, end='')
         print(f"\n\n[+] COMPLETED! SAVED TO {OUTPUT_FILE} | ENDED AT {time.asctime()}")
-    ser.close()
+    finally:
+        ser.close()
 
 if __name__ == "__main__":
     try:
@@ -163,3 +149,5 @@ if __name__ == "__main__":
         print(f"\r[!] Unexpected Error Occurred. Abort. ({e})")
     except OSError as e:
         print(f"\r[!] UART Cable Unplugged. Abort. ({e})")
+    except RuntimeError as e:
+        print(f"\r[!] Error: {e}. Abort,")
