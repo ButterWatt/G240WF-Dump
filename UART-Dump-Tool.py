@@ -82,7 +82,7 @@ def read_block_with_retry(ser, offset_str, max_retries=3):
         hex_bytes = re.findall(r'\b[0-9a-fA-F]{2}\b', clean_text)
         binary_data = bytes([int(b, 16) for b in hex_bytes])
         
-        if len(binary_data) > 0:
+        if len(binary_data) == 4096:
             return binary_data
         
         time.sleep(0.1)
