@@ -36,11 +36,7 @@ def governor_intercept():
             governor = path.read().strip()
     except OSError:
         return
-    if governor != "performance":
-        print(f"\r[!] CPU Governor is set to {governor}. On {host}, it is a bottleneck and causes timing issue.")
-        print("""[!] Please change your device governor to "performane" in order to continue.""")
-        exit(0)
-    print(f"\n[*] No issue detected with governor. Continue (Device's governor: {governor})")
+    raise RuntimeError(f"\rCPU Governor is set to {governor}. On {host}, it will causes timing issue.") if governor != "performance" else print(f"\n[*] No issue detected with governor. Continue (Device's governor: {governor})")
 
 def hex_str_to_int(hex_str):
     clean_hex = hex_str.strip().lower().replace("0x", "")
@@ -97,8 +93,7 @@ def main():
     end_addr = hex_str_to_int(END_ADDR_HEX)
     
     if start_addr >= end_addr:
-        print("[!] ERROR: START ADDR MUST SMALLER THAN END ADDR!")
-        return
+        raise RuntimeError("Start address must not be greater than end address")
 
     # CALCULATE BLOCK | TÍNH TOÁN KHỐI
     total_bytes = end_addr - start_addr
