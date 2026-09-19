@@ -2,7 +2,7 @@
 MTD Dump of Nokia G-240W-F GPON ONT
 
 >[!NOTE]
->You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump-Tool.py)
+>You can find the dump within [Releases Tab](https://github.com/ButterWatt/G240WF-Dump/releases), also dump tool [here](https://github.com/ButterWatt/G240WF-Dump/blob/main/UART-Dump-Tool.py) just in case you wanna dump yourself (I'd like to recommend you to use programmer likes CH341A if you have one. The script will not ensure for usable dump and will take up to 15 hours for 128MB dump)
 >
 >The tool requires `pyserial` and takes up to 14 hours for full dump file in ideal conditions including no hardware/software interupt, both device must be powered, connected via UART, target is in U-boot and host device's `governor` must set to *performance* for ARMv7l/hf devices (x86 or AArch64 can set to *interactive* or *ondemand* to lower power consumtion)
 # License
